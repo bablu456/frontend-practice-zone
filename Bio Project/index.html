@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Bio Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: linear-gradient(120deg, #00d4ff, #0078ff);
+            color: #222;
+        }
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(90deg, #0078ff, #00d4ff);
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .bio {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .bio img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid #0078ff;
+            box-shadow: 0 4px 15px rgba(0, 120, 255, 0.4);
+            object-fit: cover;
+        
+        }
+
+        .bio h2 {
+            margin-top: 15px;
+            color: #0078ff;
+        }
+
+        .highlight {
+            color: #0078ff;
+            font-weight: 600;
+        }
+
+        .about {
+            padding: 30px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        #skills {
+            background: #f5f7fa;
+            padding: 30px;
+            text-align: center;
+        }
+
+        #skills span {
+            display: inline-block;
+            background: #0078ff;
+            color: white;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        #skills span:hover {
+            background: #00d4ff;
+            transform: scale(1.1);
+        }
+
+        .contact {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .contact i {
+            margin: 0 10px;
+            color: #0078ff;
+            transition: color 0.3s;
+        }
+
+        .contact i:hover {
+            color: #00d4ff;
+        }
+
+        footer {
+            text-align: center;
+            background: #0078ff;
+            color: white;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Bablu Kumar</h1>
+            <p>Web Developer & Tech Enthusiast</p>
+        </header>
+
+        <section class="bio">
+            <img src="b.jpg" alt="Profile">
+            <h2>Hello, I'm <span class="highlight">Bablu</span></h2>
+            <p>Passionate about crafting modern, responsive web designs and learning new technologies.</p>
+        </section>
+
+        <section class="about">
+            <h3>About Me</h3>
+            <p>
+                I'm a <span class="highlight">full-stack learner</span> who loves creating 
+                websites that blend design and functionality. My goal is to become 
+                a professional developer who builds user-friendly digital experiences.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h3>My Skills</h3>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Java</span>
+            <span>c</span>
+        </section>
+
+        <div class="contact">
+            <h3>Connect with Me</h3>
+            <i class="fab fa-linkedin fa-2x"></i>
+            <i class="fab fa-github fa-2x"></i>
+            <i class="fas fa-envelope fa-2x"></i>
+        </div>
+
+        <footer>
+            © 2025 Bablu Kumar | Designed with 💙 using Internal CSS
+        </footer>
+    </div>
+
+</body>
+</html>
