@@ -1,0 +1,17 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.colorfont{
+    color: blue;
+    text-align: center;
+    font-weight: bolder;
+}
+h2{
+    background-color: red;
+    margin: 10px;
+}

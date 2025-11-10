@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bihar Tourism — Best Places to Visit</title>
+  <style>
+    :root{--accent:#0b74d1;--muted:#666}
+    body{font-family:Inter, system-ui, Arial, sans-serif;line-height:1.6;margin:0;color:#222}
+    header{background:linear-gradient(90deg, #0b74d1, #0b9bd6);color:#fff;padding:28px 18px}
+    .container{max-width:980px;margin:24px auto;padding:0 18px}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.06)}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:center;margin-top:18px}
+    .hero h1{margin:0 0 12px;font-size:28px}
+    .hero p{margin:0;color:rgba(255,255,255,0.95)}
+    .card{background:#fff;border-radius:12px;box-shadow:0 8px 24px rgba(11,116,209,0.06);overflow:hidden}
+    .places{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+    .place{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #eee}
+    .place img{width:100%;height:160px;object-fit:cover;display:block}
+    .place .body{padding:12px}
+    .place h3{margin:0 0 8px;font-size:18px}
+    .place p{margin:0;color:var(--muted);font-size:14px}
+    footer{padding:22px 18px;text-align:center;color:#666;font-size:14px}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none}
+    @media (max-width:700px){.hero{grid-template-columns:1fr}
+      .hero .card{order:2}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <strong>Bihar Tourism</strong>
+        <div style="flex:1"></div>
+        <a href="#bodhgaya">Bodh Gaya</a>
+        <a href="#nalanda">Nalanda</a>
+        <a href="#rajgir">Rajgir</a>
+        <a href="#patna">Patna</a>
+      </nav>
+      <div class="hero">
+        <div>
+          <h1>चलो सिखते-सिखते — बिहार की सैर</h1>
+          <p>यह छोटा सा static website बिहार के कुछ मशहूर पर्यटन स्थल दिखाता है — फोटो और छोटा-सा विवरण। आप इसे अपनी images और और जानकारी से आसानी से कस्टमाइज़ कर सकते हैं।</p>
+          <p style="margin-top:12px"><a class="btn" href="#places">Places to explore ↓</a></p>
+        </div>
+        <div class="card" style="padding:14px">
+          <!-- Replace the src below with a real photo URL for a hero image -->
+          <img src="https://via.placeholder.com/360x220?text=Bihar+Tourism+Photo" alt="Bihar tourism" style="width:100%;border-radius:8px;margin-bottom:10px">
+          <strong>Quick tips</strong>
+          <ul style="padding-left:18px;margin:8px 0;color:#333">
+            <li>Best time: October–March</li>
+            <li>Language: Hindi / Maithili / Bhojpuri</li>
+            <li>Respect religious places: remove shoes, dress modestly</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="places">
+    <section id="bodhgaya" class="place-section">
+      <h2 style="margin-bottom:10px">1) Bodh Gaya — Mahabodhi Temple</h2>
+      <div class="places">
+        <article class="place card">
+          <!-- Replace the image src with a real url of Mahabodhi / Bodh Gaya photo -->
+          <img src="https://via.placeholder.com/800x500?text=Mahabodhi+Temple" alt="Mahabodhi Temple">
+          <div class="body">
+            <h3>Mahabodhi Temple</h3>
+            <p>यह वही जगह है जहाँ बुद्ध को ज्ञान प्राप्त हुआ माना जाता है। यहाँ एक पवित्र 'बोधि वृक्ष' और प्राचीन मंदिर परिसर है — UNESCO World Heritage site।</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="nalanda" style="margin-top:18px">
+      <h2>2) Nalanda — प्राचीन विश्वविद्यालय के खंडहर</h2>
+      <div class="places">
+        <article class="place">
+          <img src="https://via.placeholder.com/800x500?text=Nalanda+Ruins" alt="Nalanda ruins">
+          <div class="body">
+            <h3>Nalanda Mahavihara</h3>
+            <p>दुनिया के सबसे पुराने विश्वविद्यालयों में से एक — यहाँ के खंडहर और स्तूप विज्ञान, कला और शिक्षा का प्रमाण देते हैं।</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="rajgir" style="margin-top:18px">
+      <h2>3) Rajgir — ऐतिहासिक और प्राकृतिक</h2>
+      <div class="places">
+        <article class="place">
+          <img src="https://via.placeholder.com/800x500?text=Rajgir+Vishwa+Shanti+Stupa" alt="Rajgir">
+          <div class="body">
+            <h3>Rajgir</h3>
+            <p>पुरानी दीवारें, Vishwa Shanti Stupa (peace pagoda), गर्म झरने (hot springs) और इतिहास से जुड़ी कई जगहें — छोटे ट्रेक और केबल-कार काफ़ी लोकप्रिय हैं।</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="patna" style="margin-top:18px">
+      <h2>4) Patna — राजधानी के आकर्षण</h2>
+      <div class="places">
+        <article class="place">
+          <img src="https://via.placeholder.com/800x500?text=Patna+Gol+Ghar" alt="Gol Ghar Patna">
+          <div class="body">
+            <h3>Patna (Golghar, Takht Sri Patna Sahib)</h3>
+            <p>Gol Ghar एक ऐतिहासिक गोल भवन है; वहीं Takht Sri Patna Sahib सिखों का एक महत्वपूर्ण धार्मिक स्थल है।</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-top:26px;margin-bottom:26px">
+      <h2>कैसे Customize करें (Quick)</h2>
+      <ol>
+        <li>Photos बदलने के लिए <code>&lt;img src="..."&gt;</code> में अपनी image URL डालें (Google Photos, Unsplash, या Wikimedia Commons से लिंक कर सकते हैं)</li>
+        <li>और लोकेशन जोड़ने के लिए नया <code>&lt;article class="place"&gt;...&lt;/article&gt;</code> ब्लॉक कॉपी-पेस्ट करें</li>
+        <li>लोकल पर देखने के लिए फाइल को <code>index.html</code> नाम से सेव करें और ब्राउज़र में खोलें</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    Built with ❤️ — Replace photos and text and आपका वेबसाइट तैयार है!
+  </footer>
+</body>
+</html>

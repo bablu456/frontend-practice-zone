@@ -1,0 +1,62 @@
+!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Employee Management System</title>
+ </head>
+ <body>
+ <h2Employee Management System</h2
+ <form action="/submit-employee" method="POST">
+ <table border="1" cellspacing="0" cellpadding="5">
+ <tr>
+ <th><label for="employeeId"Employee ID/label></th>
+ <td><input type="text" id="employeeId" name="employeeId" placeho
+ lder="Enter Employee ID" required></td>
+ </tr>
+ <tr>
+ <th><label for="name"Name:</label></th>
+ <td><input type="text" id="name" name="name" placeholder="Enter 
+Full Name" required></td>
+ </tr>
+ <tr>
+ <th><label for="email"Email:</label></th>
+ <td><input type="email" id="email" name="email" placeholder="Enter 
+Email Address" required></td>
+ </tr>
+ <tr>
+ <th><label for="password"Password:</label></th>
+ <td><input type="password" id="password" name="password" place
+ holder="Enter Password" required></td>
+ </tr>
+ <tr>
+ <th><label for="address"Address:</label></th>
+ <td><textarea id="address" name="address" rows="3" placeholder
+ ="Enter Address" required></textarea></td>
+ </tr>
+ <tr>
+ <th>Gender:</th>
+ <td>
+ <input type="radio" id="male" name="gender" value="Male" require
+ d>
+ <label for="male"Male</label><br>
+ <input type="radio" id="female" name="gender" value="Female">
+ <label for="female"Female</label><br>
+ <input type="radio" id="other" name="gender" value="Other">
+ <label for="other"Other</label>
+ </td>
+ </tr>
+ <tr>
+ <th><label for="city"City:</label></th>
+ <td>
+ <select id="city" name="city" required>
+ <option value="" Select City --</option>
+ <option value="Delhi"Delhi</option>
+ <option value="Mumbai"Mumbai</option>
+ <option value="Bangalore"Bangalore</option>
+ <option value="Chennai"Chennai</option>
+ <option value="Kolkata"Kolkata</option>
+ </select>
+ </td>
+ </tr>
+ <tr>

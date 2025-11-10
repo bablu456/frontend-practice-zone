@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(235, 188, 211);
+}
+p {
+    background-color: rgb(201, 231, 239);
+}
+th {
+    border: solid;
+}
+td {
+    border: solid;
+}
+caption {
+    color: blue;
+    font-style: italic;
+    font-family: Arial;
+}

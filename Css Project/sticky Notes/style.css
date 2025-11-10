@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa ;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.sticky-header{
+    position: sticky;
+    top: 0;
+    background: linear-gradient(90deg, #ffb347, #ffcc33);
+    padding: 20px;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-header h1{
+    margin: 0;
+    font-size: 28px;
+}
+
+.sticky-header p{
+    margin: 5px 0 0;
+}
+
+/* NOTES BOARD  */
+
+.board{
+    position: relative;
+    height: 100vh;
+    background: #fff5cc;
+    padding: 60px;
+}
+
+.note{
+    width: 220px;
+    min-height: 180px;
+    background: #fff8a0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    transition: transform 0.3s ease;
+    cursor: grab;
+}
+.note h3{
+    margin-top: 0;
+    color: #444;
+}
+
+.note p{
+    font-size: 15px;
+    color: #333;
+}
+
+.note:hover{
+    transform: scale(1.05) rotate(2deg);
+}
+
+#note1{
+    top: 120px;
+    left: 200px;
+    background: #ffeb99;
+    transform: rotate(-3deg);
+    z-index: 2;
+}
+#note2 {
+  top: 220px;
+  left: 500px;
+  background: #a0ffb8;
+  transform: rotate(2deg);
+  z-index: 3;
+}
+#note3 {
+  top: 400px;
+  left: 320px;
+  background: #ffd6a5;
+  transform: rotate(-5deg);
+  z-index: 1;
+}
+#note4 {
+  top: 300px;
+  left: 700px;
+  background: #b5e5ff;
+  transform: rotate(4deg);
+  z-index: 4;
+}
+
+
+footer {
+  background: linear-gradient(90deg, #ffb347, #ffcc33);
+  color: white;
+  padding: 15px;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .board {
+    height: auto;
+    padding: 30px;
+  }
+  .note {
+    position: static;
+    margin: 20px auto;
+    transform: none;
+  }
+}

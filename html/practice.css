@@ -1,0 +1,15 @@
+h1{
+ font-weight: bold;
+ font-size: 45px;
+}
+espan:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+body{
+    background-color: green;
+}
+img{
+    width: 300px;
+    height: 300px;
+}

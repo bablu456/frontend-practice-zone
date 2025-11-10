@@ -1,0 +1,142 @@
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 26px;
+  color: #0078ff;
+}
+.logo span {
+  color: #00d4ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #0078ff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  height: 90vh;
+  background: linear-gradient(120deg, #00d4ff, #0078ff, #6c63ff);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.hero-content h2 {
+  font-size: 45px;
+  text-shadow: 2px 3px 8px rgba(0,0,0,0.3);
+}
+.hero-content span {
+  background: linear-gradient(90deg, #fff, #00ffea);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-content p {
+  font-size: 18px;
+  margin: 25px 0;
+  line-height: 1.6;
+}
+.btn {
+  display: inline-block;
+  background: white;
+  color: #0078ff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.btn:hover {
+  background: #0078ff;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* ===== Features Section ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 80px 60px;
+  text-align: center;
+  background: #f5f7fa;
+}
+
+.feature {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 30px;
+  transition: transform 0.3s;
+}
+.feature:hover {
+  transform: translateY(-5px);
+}
+.feature i {
+  font-size: 40px;
+  color: #0078ff;
+  margin-bottom: 15px;
+}
+.feature h3 {
+  color: #0078ff;
+  margin-bottom: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: linear-gradient(120deg, #0078ff, #00d4ff);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .hero-content h2 {
+    font-size: 34px;
+  }
+  .features {
+    padding: 50px 20px;
+  }
+}
