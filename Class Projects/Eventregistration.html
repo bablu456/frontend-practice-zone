@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+</head>
+<body style="background-color: aquamarine;">
+    <center>
+        <form class="card" action="#" method="post">
+  <h2 style="background-color: aqua;">Event Registration</h2>
+  <label>Name: <input required></label><br>
+  <label>Email: <input type="email" required></label><br>
+  <label>Event Date: <input type="date" name="date" required></label><br>
+  <p>Session:</p>
+  <label><input type="radio" name="session" value="morning" required> Morning</label>
+  <label><input type="radio" name="session" value="evening"> Evening</label><br>
+  <p>Add-ons:</p>
+  <label><input type="checkbox" name="lunch"> Lunch included</label>
+  <label><input type="checkbox" name="kit"> Event Kit</label><br>
+  <button style="background-color: red;" type="submit">Register</button>
+</form>
+<table cellpadding="10px" border="1" style="border-collapse: collapse;">
+  <caption>Schedule</caption>
+  <tr><th>Time</th><th>Activity</th></tr>
+  <tr><td>10:00</td><td>Registration</td></tr>
+  <tr><td>11:00</td><td>Keynote</td></tr>
+</table>
+    </center>
+</body>
+</html>
