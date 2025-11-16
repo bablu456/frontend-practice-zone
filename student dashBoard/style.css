@@ -1,0 +1,130 @@
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  height: 100vh;
+  background: #f5f7fa;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 230px;
+  background: linear-gradient(180deg, #0078ff, #00d4ff);
+  color: white;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+}
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.logo span {
+  color: #fff;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+.sidebar ul li {
+  padding: 15px 30px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.sidebar ul li:hover, .sidebar ul li.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-left: 5px solid #fff;
+}
+
+/* ===== Main Section ===== */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://i.imgur.com/Oa1qKxF.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #222;
+  position: relative;
+}
+
+/* ===== Topbar ===== */
+.topbar {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.topbar h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #0078ff;
+}
+.profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #0078ff;
+}
+
+/* ===== Cards Section ===== */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+.card {
+  background: white;
+  width: 250px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card h3 {
+  color: #0078ff;
+  margin-bottom: 10px;
+}
+
+/* ===== Hidden Section ===== */
+.hidden-section {
+  background: white;
+  margin: 40px auto;
+  padding: 30px;
+  width: 80%;
+  border-radius: 10px;
+  text-align: center;
+  visibility: hidden; /* hides but keeps space */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: none;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
