@@ -1,0 +1,106 @@
+@import url('shared.css');
+
+/* =============================
+   ABOUT SECTION — Premium Style
+   ============================= */
+
+.about-hero {
+  padding: 60px 0;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Image panel */
+.about-media {
+  height: 380px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 15px 45px rgba(15, 23, 42, 0.15);
+  animation: slideIn 1s ease-out;
+}
+
+/* Slide animation */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-25px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Text block */
+.about-text h1 {
+  font-size: 34px;
+  line-height: 1.3;
+  margin-bottom: 14px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.about-text .lead {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.about-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+  padding-left: 22px;
+  position: relative;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Custom bullet */
+.about-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  color: var(--accent);
+}
+
+/* =============================
+   RESPONSIVENESS
+   ============================= */
+
+@media (max-width: 1020px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .about-media {
+    height: 260px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-hero {
+    padding: 40px 0;
+  }
+  .about-text h1 {
+    font-size: 28px;
+  }
+  .about-media {
+    height: 220px;
+    border-radius: 12px;
+  }
+}
