@@ -1,0 +1,41 @@
+ button{
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    margin-left: 10px;
+ }
+ .sub-button{
+    background-color: red;
+    color: white;
+    padding-left: 20px;
+    padding-top: 7px;
+    text-align: center;
+    padding-bottom: 7px;
+    padding-right: 20px;
+    font-size: bold;
+    font-size: 14px;
+    cursor: pointer;
+ }
+ .sub-button:hover{
+    /* background-color: gold; */
+    opacity: 0.8;
+ }
+ .sub-button:active{
+    opacity: 0.5;
+ }
+ .join-button{
+    background-color: blue;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+ }
+ .tweet-button{
+    background-color: green;
+    color: white;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+ }
