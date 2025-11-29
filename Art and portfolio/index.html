@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>ArtSpace - Responsive Portfolio</title>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ArtSpace</div>
+    <ul class="nav-links">
+      <li><a href="#home" onclick="showPage('home')">Home</a></li>
+      <li><a href="#about" onclick="showPage('about')">About</a></li>
+      <li><a href="#portfolio" onclick="showPage('portfolio')">Portfolio</a></li>
+      <li><a href="#gallery" onclick="showPage('gallery')">Gallery</a></li>
+      <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+      <li><a href="#login" onclick="showPage('login')">Login</a></li>
+      <li><a href="#signup" onclick="showPage('signup')">Signup</a></li>
+    </ul>
+  </header>
+
+  <!-- HOME PAGE -->
+  <div id="home" class="page active">
+    <section class="hero">
+      <h1>Welcome to ArtSpace</h1>
+      <p>Your creative place for art & portfolio showcase</p>
+    </section>
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div id="about" class="page">
+    <section class="section">
+      <h2>About</h2>
+      <p>ArtSpace is a modern portfolio website designed for artists, designers, and creators.</p>
+    </section>
+  </div>
+
+  <!-- PORTFOLIO PAGE -->
+  <div id="portfolio" class="page">
+    <section class="section">
+      <h2>Portfolio</h2>
+      <div class="grid">
+        <div class="card">Railway-Ticket-Reservation</div>
+        <div class="card">Hotel Room Booking</div>
+        <div class="card">Art & Portfolio</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GALLERY PAGE -->
+  <div id="gallery" class="page">
+    <section class="section">
+      <h2>Gallery</h2>
+      <div class="grid">
+        <div class="img-box" style="background-image:url('https://picsum.photos/400?1');"></div>
+        <div class="img-box" style="background-image:url('https://picsum.photos/400?2');"></div>
+        <div class="img-box" style="background-image:url('https://picsum.photos/400?3');"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="contact" class="page">
+    <section class="section">
+      <h2>Contact Us</h2>
+      <form class="form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Message"></textarea>
+        <button class="btn">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- LOGIN PAGE -->
+  <div id="login" class="page">
+    <section class="section">
+      <h2>Login</h2>
+      <form class="form">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button class="btn">Login</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- SIGNUP PAGE -->
+  <div id="signup" class="page">
+    <section class="section">
+      <h2>Signup</h2>
+      <form class="form">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button class="btn">Signup</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 ArtSpace | Made by Bablu Kumar
+  </footer>
+
+  <script>
+    function showPage(page){
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      document.getElementById(page).classList.add('active');
+      window.scrollTo(0,0);
+    }
+  </script>
+</body>
+</html>

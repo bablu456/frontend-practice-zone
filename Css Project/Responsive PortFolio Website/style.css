@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #fff;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.logo span {
+  color: #00f5ff;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+}
+.nav-links a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #00f5ff;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #00f5ff, #002b55);
+  background-size: 300% 300%;
+  animation: gradientFlow 6s ease infinite;
+}
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+.hero span {
+  color: #00f5ff;
+}
+.tagline {
+  margin: 15px 0 25px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+.btn {
+  background: linear-gradient(135deg, #00f5ff, #0072ff);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 15px #00f5ff;
+  transition: all 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00f5ff;
+}
+
+/* Sections */
+.section {
+  padding: 80px 10%;
+  text-align: center;
+}
+.section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #00f5ff;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.05);
+  transition: 0.3s;
+}
+.glass:hover {
+  box-shadow: 0 0 25px rgba(0, 245, 255, 0.25);
+}
+
+/* About */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #00f5ff;
+  object-fit: cover;
+}
+.about-text {
+  max-width: 500px;
+  padding: 20px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.project-card {
+  padding: 20px;
+  text-align: left;
+}
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
+}
+.project-card h3 {
+  color: #00f5ff;
+  margin-bottom: 8px;
+}
+
+/* Contact */
+.contact-text {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  opacity: 0.9;
+}
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+.contact-form button {
+  align-self: center;
+}
+
+/* Footer */
+footer {
+  background: rgba(255,255,255,0.05);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+  }
+  .about-container {
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}

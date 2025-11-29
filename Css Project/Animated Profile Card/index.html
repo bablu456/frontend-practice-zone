@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bablu Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Bablu<span>Dev</span></div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-btn">☰</div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero fade-in">
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="glow">Bablu Kumar</span></h1>
+      <p class="typing">Building Next-Gen Web Experiences with Elegance ⚡</p>
+      <a href="#projects" class="btn pulse">Explore My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section fade-up">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="images/profile.jpg" alt="Profile" class="profile-pic slide-in">
+      <div class="about-text glass">
+        <p>
+          I’m <strong>Bablu</strong> — a passionate developer who loves creating digital art through code.
+          My focus is on crafting user experiences that blend design, performance, and functionality.
+        </p>
+        <p>
+          Currently learning <b>Full Stack Web Development</b> while mastering the art of animation, interactivity,
+          and visual storytelling through technology.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects section fade-up">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project-card glass zoom-in">
+        <img src="images/project1.jpg" alt="Project 1">
+        <h3>Train Booking System</h3>
+        <p>Terminal-based ticketing app in C with file storage and colorful UI.</p>
+      </div>
+      <div class="project-card glass zoom-in">
+        <img src="images/project2.jpg" alt="Project 2">
+        <h3>Profile Card</h3>
+        <p>Responsive glowing personal card built purely with HTML & CSS.</p>
+      </div>
+      <div class="project-card glass zoom-in">
+        <img src="images/project3.jpg" alt="Project 3">
+        <h3>Portfolio Website</h3>
+        <p>Professional glowing portfolio with animations and glass UI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact section fade-up">
+    <h2>Contact Me</h2>
+    <p class="contact-text">Got a project idea? Let's collaborate ✉️</p>
+    <form class="contact-form glass slide-in">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn pulse">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Bablu Kumar • Designed with ❤️ + imagination</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
