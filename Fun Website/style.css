@@ -1,0 +1,210 @@
+
+/* ## style.css */
+
+/* ```css */
+/*
+  style.css
+  Styles for the personal website. Mobile-first responsive design.
+  Comments explain the purpose of each rule and how to customize it.
+*/
+
+/* =====================================================
+   1. Root variables: color palette, spacing, typography
+   ===================================================== */
+:root{
+  /* Color palette (change these to match your branding) */
+  --bg: #0f1724;              /* dark background */
+  --card: #0b1220;            /* card background */
+  --muted: #94a3b8;          /* muted text */
+  --text: #e6eef8;           /* main text color */
+  --accent: #6ee7b7;         /* accent / call-to-action color */
+  --glass: rgba(255,255,255,0.03);
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --base: 16px;              /* base font-size */
+
+  /* Layout spacing */
+  --container: 1100px;
+  --radius: 12px;
+  --gap: 1rem;
+}
+
+/* Light theme alternative (uncomment to use light theme) */
+/*
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #556070;
+  --text: #0b1220;
+  --accent: #2563eb;
+  --glass: rgba(11,18,32,0.02);
+}
+*/
+
+/* =====================================================
+   2. Global reset and base styles
+   ===================================================== */
+*{box-sizing: border-box;}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: var(--font-sans);
+  font-size: var(--base);
+  background: linear-gradient(180deg,var(--bg), #05060a 80%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Container utility: center content and limit width */
+.container{
+  width: calc(100% - 2rem);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Generic headings */
+h1, h2, h3, h4{margin:0 0 0.5rem 0}
+.section{margin-top:2.25rem;margin-bottom:2.25rem}
+.section-title{font-size:1.375rem;color:var(--text);margin-bottom:0.25rem}
+.section-sub{color:var(--muted);margin-bottom:1rem}
+
+/* =====================================================
+   3. Hero styles: profile area and quick links
+   ===================================================== */
+.hero{
+  padding:2.25rem 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), transparent);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.hero-inner{
+  display:flex;
+  align-items:center;
+  gap:1.25rem;
+  justify-content:space-between;
+}
+
+/* Profile box: photo & name */
+.profile{display:flex;gap:1rem;align-items:center}
+.profile-photo{
+  width:96px;height:96px;border-radius:14px;object-fit:cover;border:2px solid rgba(255,255,255,0.04);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+}
+.name{font-size:1.5rem;letter-spacing: -0.5px}
+.tagline{color:var(--muted);margin-top:0.25rem}
+
+/* Social icons row */
+.socials{display:flex;gap:0.5rem;margin-top:0.5rem}
+.social{display:inline-flex;align-items:center;justify-content:center;padding:0.4rem;border-radius:8px;text-decoration:none;color:var(--text);background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+
+/* Quick links on the right of hero */
+.quick-links{display:flex;gap:0.6rem}
+.btn-link{
+  color:var(--text);text-decoration:none;padding:0.5rem 0.75rem;border-radius:10px;font-weight:600;background:transparent;border:1px solid transparent
+}
+.btn-link:hover{background:rgba(255,255,255,0.02);transform:translateY(-2px)}
+
+/* =====================================================
+   4. Grid utilities used throughout (mobile-first)
+   ===================================================== */
+.grid{display:grid;gap:1rem}
+
+/* Portfolio grid: single column on mobile, multi-column on larger screens */
+.portfolio-grid{grid-template-columns:1fr;}
+.card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+.card-image{width:100%;height:180px;object-fit:cover;display:block}
+.card-body{padding:1rem}
+.card-title{font-size:1.05rem;margin-bottom:0.35rem}
+.card-desc{color:var(--muted);font-size:0.95rem}
+
+/* Storage grid has multiple smaller cards */
+.storage-grid{grid-template-columns:1fr;}
+.storage-card{background:linear-gradient(0deg, rgba(255,255,255,0.01), transparent);border-radius:12px;padding:1rem;border:1px solid rgba(255,255,255,0.03);box-shadow:0 4px 18px rgba(2,6,23,0.5)}
+.storage-card .card-title{margin-bottom:0.5rem}
+
+/* Video thumbnails row */
+.video-row{display:flex;gap:0.5rem;flex-wrap:wrap}
+.video-thumb{display:block;width:140px;text-decoration:none;color:var(--text)}
+.video-thumb img{width:100%;height:80px;object-fit:cover;border-radius:8px}
+.video-title{display:block;margin-top:0.35rem;font-size:0.9rem;color:var(--muted)}
+
+/* Mini gallery inside storage */
+.mini-gallery{display:flex;gap:0.5rem}
+.photo-thumb img{width:80px;height:80px;object-fit:cover;border-radius:8px}
+
+/* Track styling: space for label and audio control */
+.track{display:flex;flex-direction:column;gap:0.25rem;margin-top:0.5rem}
+.track-label{font-weight:600;font-size:0.95rem}
+
+/* Watchlist columns */
+.watch-sections{display:flex;gap:1rem;flex-direction:column}
+.watch-sections h4{margin:0 0 0.5rem 0}
+.watch-sections ul{margin:0;padding-left:1rem;color:var(--muted)}
+
+/* Gallery large grid */
+.gallery-grid{grid-template-columns:1fr;}
+.gallery-item img{width:100%;height:220px;object-fit:cover;border-radius:12px;display:block}
+
+/* Goals list */
+.goals-list{list-style:disc;padding-left:1.25rem;color:var(--muted)}
+
+/* Footer */
+.footer{border-top:1px solid rgba(255,255,255,0.03);padding:1rem 0;margin-top:2rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-right a{margin-left:0.8rem;color:var(--muted);text-decoration:none}
+
+/* =====================================================
+   5. Responsive breakpoints: expand grid on larger screens
+   ===================================================== */
+@media(min-width:700px){
+  .portfolio-grid{grid-template-columns:repeat(2,1fr);}
+  .storage-grid{grid-template-columns:repeat(2,1fr);}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .gallery-item img{height:260px}
+}
+
+@media(min-width:1100px){
+  .hero-inner{gap:2rem}
+  .profile-photo{width:128px;height:128px}
+  .portfolio-grid{grid-template-columns:repeat(3,1fr)}
+  .storage-grid{grid-template-columns:repeat(3,1fr)}
+  .gallery-grid{grid-template-columns:repeat(4,1fr)}
+  .container{padding:3rem 0}
+}
+
+/* =====================================================
+   6. Small interaction tweaks (hover, focus, accessibility)
+   ===================================================== */
+a:focus{outline:3px solid rgba(110,231,183,0.15);outline-offset:3px}
+.card:hover, .storage-card:hover{transform:translateY(-6px);transition:transform 220ms cubic-bezier(.2,.9,.2,1)}
+.video-thumb:hover img{transform:scale(1.03);transition:transform 200ms}
+
+/* End of stylesheet */
+/* ``` */
+
+/* ---
+
+## How to use / Customize quickly
+
+* **Files:** Save the first code block as `index.html` and the second as `style.css` in the same folder.
+* **Images:** Replace placeholder image URLs (`https://via.placeholder.com/...`) with your real image URLs or local file paths (e.g. `images/me.jpg`).
+* **Audio:** Replace `sample-audio-1.mp3` with your own audio files placed in the same folder or an absolute URL.
+* **Links:** Change all `href="#"` to your real links. Use `target="_blank" rel="noopener"` for external pages.
+* **Colors / theme:** Edit `:root` variables (e.g. `--accent`, `--bg`) to change the site's look quickly.
+* **Make it live:** Drag the folder into a simple static host (Netlify drop, GitHub pages or any static hosting) — no build steps required.
+
+---
+
+If you want:
+
+* I can **convert this to a downloadable ZIP** with files ready to upload.
+* Or I can **add small JavaScript** to implement clickable-to-play (single-play) behavior, drag-and-drop photo upload UI, or a simple CSS-only theme switcher.
+
+Tell me which extra features you'd like and I'll update the code.
+
+---
+
+*End of canvas document.* */

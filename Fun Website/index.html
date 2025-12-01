@@ -1,0 +1,258 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags for responsive behavior and character encoding -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Page title shown in the browser tab -->
+  <title>Your Name — Personal Dashboard</title>
+
+  <!-- Link to external stylesheet (style.css) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Simple meta description for SEO / share cards -->
+  <meta name="description" content="Personal dashboard: portfolio, notes, watchlist, gallery and music — built with HTML & CSS.">
+</head>
+<body>
+  <!-- Root wrapper to control global spacing and background -->
+  <div class="site-root">
+
+    <!-- HEADER / HERO -->
+    <header class="hero">
+      <!-- Container keeps content centered and constrained -->
+      <div class="container hero-inner">
+        <!-- Profile block: image + name + bio -->
+        <div class="profile">
+          <!-- Replace src with your profile picture or placeholder -->
+          <img class="profile-photo" src="https://via.placeholder.com/160" alt="Profile photo">
+
+          <!-- Name and quick intro -->
+          <div class="profile-info">
+            <h1 class="name">Your Name</h1>
+            <p class="tagline">A short, punchy introduction about you. Replace this placeholder text.</p>
+
+            <!-- Social icons: inline SVGs to avoid external libraries -->
+            <div class="socials" aria-hidden="false">
+              <!-- Each anchor should point to your social profile -->
+              <a href="#" aria-label="Instagram" class="social"><!-- Instagram SVG -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+              </a>
+              <a href="#" aria-label="LinkedIn" class="social">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M7 10.5v7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M7 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill="currentColor"/><path d="M11 13.5v4M11 10.5v.1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </a>
+              <a href="#" aria-label="GitHub" class="social">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.5-4-1.5-.6-1.5-1.4-1.9-1.4-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 1.3 2 1.3 1.2 2 3.2 1.4 4 .9.1-.8.5-1.4.8-1.7-2.6-.3-5.3-1.3-5.3-5.7 0-1.2.4-2.1 1-2.9-.1-.3-.4-1.6.1-3.3 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .5 1.7.2 3 .1 3.3.6.8 1 1.8 1 2.9 0 4.4-2.8 5.4-5.3 5.7.6.5 1 1.4 1 2.8v4.1c0 .3.2.7.9.6A12 12 0 0 0 12 .5z" stroke="currentColor" stroke-width="0.3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick stats or links (optional) -->
+        <nav class="quick-links" aria-label="Quick links">
+          <!-- These can be anchor links to sections below -->
+          <a href="#portfolio" class="btn-link">Portfolio</a>
+          <a href="#storage" class="btn-link">My Storage</a>
+          <a href="#gallery" class="btn-link">Gallery</a>
+          <a href="#watchlist" class="btn-link">Watchlist</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container main-content">
+
+      <!-- PORTFOLIO SECTION -->
+      <section id="portfolio" class="section portfolio">
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-sub">A few projects & mockups. Replace images and text with your own work.</p>
+
+        <!-- Responsive grid of cards -->
+        <div class="grid portfolio-grid">
+          <!-- Each .card is a project preview -->
+          <article class="card">
+            <img src="https://via.placeholder.com/400x250" alt="Project image" class="card-image">
+            <div class="card-body">
+              <h3 class="card-title">Project Title</h3>
+              <p class="card-desc">Short description of the project. Replace with your own content.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://via.placeholder.com/400x250" alt="Project image" class="card-image">
+            <div class="card-body">
+              <h3 class="card-title">Project Title</h3>
+              <p class="card-desc">Short description of the project. Replace with your own content.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://via.placeholder.com/400x250" alt="Project image" class="card-image">
+            <div class="card-body">
+              <h3 class="card-title">Project Title</h3>
+              <p class="card-desc">Short description of the project. Replace with your own content.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PERSONAL STORAGE SECTION: notes, urls, videos, music, etc. -->
+      <section id="storage" class="section storage">
+        <h2 class="section-title">My Personal Storage</h2>
+        <p class="section-sub">A quick, visual place to keep notes, links, music and files (placeholder content).</p>
+
+        <!-- Cards grid for different storage types -->
+        <div class="grid storage-grid">
+
+          <!-- Notes card -->
+          <article class="storage-card notes">
+            <h3 class="card-title">Notes</h3>
+            <p class="card-desc">Add your personal notes here. Replace this text with your notes.</p>
+            <!-- Example static note list -->
+            <ul class="notes-list">
+              <li>Buy domain: example.com</li>
+              <li>Backup photos monthly</li>
+              <li>Goal: finish portfolio revamp</li>
+            </ul>
+          </article>
+
+          <!-- Links card: store important URLs -->
+          <article class="storage-card links">
+            <h3 class="card-title">Important Links</h3>
+            <p class="card-desc">Clicking links will open target pages in a new tab.</p>
+            <ul class="links-list">
+              <li><a href="#" target="_blank" rel="noopener">Example: My Blog</a></li>
+              <li><a href="#" target="_blank" rel="noopener">Example: Film Download Site</a></li>
+              <li><a href="#" target="_blank" rel="noopener">Example: Useful Tool</a></li>
+            </ul>
+          </article>
+
+          <!-- Favourite videos (placeholders) -->
+          <article class="storage-card videos">
+            <h3 class="card-title">Favourite Videos</h3>
+            <p class="card-desc">Clickable posters — they open the video in a new tab.</p>
+            <div class="video-row">
+              <a href="#" target="_blank" class="video-thumb">
+                <img src="https://via.placeholder.com/220x120" alt="Video poster">
+                <span class="video-title">Video 1</span>
+              </a>
+              <a href="#" target="_blank" class="video-thumb">
+                <img src="https://via.placeholder.com/220x120" alt="Video poster">
+                <span class="video-title">Video 2</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Music card: uses native audio control -->
+          <article class="storage-card music">
+            <h3 class="card-title">Music</h3>
+            <p class="card-desc">Native audio players — click the play button to start (browsers block auto-play by default).</p>
+
+            <!-- Each audio element is a small native player (controls provided by browser) -->
+            <div class="track">
+              <label class="track-label">Track 1</label>
+              <!-- Replace src with your audio file (MP3/OGG). Controls required for user interaction. -->
+              <audio controls preload="none">
+                <source src="sample-audio-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="track">
+              <label class="track-label">Track 2</label>
+              <audio controls preload="none">
+                <source src="sample-audio-2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+          </article>
+
+          <!-- Photos card: small gallery preview -->
+          <article class="storage-card photos" id="gallery">
+            <h3 class="card-title">Photos</h3>
+            <p class="card-desc">A small preview of photos — open full resolution by replacing href with real image links.</p>
+            <div class="mini-gallery">
+              <a href="#" class="photo-thumb"><img src="https://via.placeholder.com/120" alt="Photo 1"></a>
+              <a href="#" class="photo-thumb"><img src="https://via.placeholder.com/120" alt="Photo 2"></a>
+              <a href="#" class="photo-thumb"><img src="https://via.placeholder.com/120" alt="Photo 3"></a>
+            </div>
+          </article>
+
+          <!-- Watchlist card: want to watch / watched -->
+          <article class="storage-card watchlist" id="watchlist">
+            <h3 class="card-title">Watchlist</h3>
+            <p class="card-desc">Organise movies & series into "Want to Watch" and "Watched" lists.</p>
+
+            <div class="watch-sections">
+              <div class="want">
+                <h4>Want to Watch</h4>
+                <ul>
+                  <li>Webseries 1</li>
+                  <li>Film 2</li>
+                </ul>
+              </div>
+              <div class="watched">
+                <h4>Watched</h4>
+                <ul>
+                  <li>Movie A</li>
+                  <li>Webseries B</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+        </div> <!-- end storage-grid -->
+      </section>
+
+      <!-- PHOTO GALLERY (LARGER) -->
+      <section class="section gallery-large">
+        <h2 class="section-title">Photo Gallery</h2>
+        <p class="section-sub">Click images to open full-size (replace placeholders with real images).</p>
+
+        <div class="grid gallery-grid">
+          <a href="#" class="gallery-item"><img src="https://via.placeholder.com/500x300" alt="Gallery image"></a>
+          <a href="#" class="gallery-item"><img src="https://via.placeholder.com/500x300" alt="Gallery image"></a>
+          <a href="#" class="gallery-item"><img src="https://via.placeholder.com/500x300" alt="Gallery image"></a>
+          <a href="#" class="gallery-item"><img src="https://via.placeholder.com/500x300" alt="Gallery image"></a>
+        </div>
+      </section>
+
+      <!-- GOALS & INTERESTS SECTION -->
+      <section class="section goals">
+        <h2 class="section-title">Goals & Interests</h2>
+        <p class="section-sub">Short list of your goals and interests. Keep this updated as your priorities change.</p>
+        <ul class="goals-list">
+          <li>Learn new design system</li>
+          <li>Ship a personal portfolio</li>
+          <li>Read 12 books a year</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p>&copy; <span id="year">2025</span> Your Name. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <!-- Repeated social icons for convenience -->
+          <a href="#" class="social small" aria-label="GitHub">GitHub</a>
+          <a href="#" class="social small" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- end site-root -->
+
+  <!--
+    Note: No JavaScript used. Browser-native audio controls are provided so users can press play.
+    For clickable-to-play behavior without visible controls, a small JavaScript snippet would be required,
+    but the project requirement was "HTML + CSS only", so we use native controls & links.
+  -->
+</body>
+</html>
