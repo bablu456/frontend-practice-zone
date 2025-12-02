@@ -1,0 +1,403 @@
+{
+    "_comment": "Sample data for the personal portfolio PWA. This file contains placeholder data that can be imported to populate the app with initial content.",
+    "notes": [
+        {
+            "id": 1701234567890,
+            "content": "# Welcome to Your Portfolio!\n\nThis is a **markdown-enabled** note. You can use:\n\n- **Bold** and *italic* text\n- [Links](https://example.com)\n- `Code snippets`\n- Lists and more!\n\nYour notes support full markdown syntax with live preview.",
+            "encrypted": false,
+            "timestamp": 1701234567890,
+            "tags": [
+                "welcome",
+                "markdown"
+            ]
+        },
+        {
+            "id": 1701234590123,
+            "content": "Remember to update project descriptions and add real screenshots!",
+            "encrypted": false,
+            "timestamp": 1701234590123,
+            "tags": [
+                "todo"
+            ]
+        },
+        {
+            "id": 1701234612345,
+            "content": "Meeting notes from today:\n- Discussed new feature ideas\n- Need to finalize design mockups\n- Deploy by end of week",
+            "encrypted": false,
+            "timestamp": 1701234612345,
+            "tags": [
+                "meeting"
+            ]
+        }
+    ],
+    "watchlist": {
+        "wantToWatch": [
+            {
+                "id": 1,
+                "title": "Inception",
+                "year": "2010",
+                "genre": "Sci-Fi",
+                "poster": "https://placehold.co/300x450/a855f7/ffffff?text=Inception",
+                "rating": null,
+                "notes": ""
+            },
+            {
+                "id": 2,
+                "title": "The Matrix",
+                "year": "1999",
+                "genre": "Action",
+                "poster": "https://placehold.co/300x450/3b82f6/ffffff?text=The+Matrix",
+                "rating": null,
+                "notes": ""
+            },
+            {
+                "id": 3,
+                "title": "Interstellar",
+                "year": "2014",
+                "genre": "Adventure",
+                "poster": "https://placehold.co/300x450/ec4899/ffffff?text=Interstellar",
+                "rating": null,
+                "notes": ""
+            },
+            {
+                "id": 4,
+                "title": "Stranger Things",
+                "year": "2016",
+                "genre": "Series",
+                "poster": "https://placehold.co/300x450/14b8a6/ffffff?text=Stranger+Things",
+                "rating": null,
+                "notes": ""
+            }
+        ],
+        "watched": [
+            {
+                "id": 5,
+                "title": "Breaking Bad",
+                "year": "2008",
+                "genre": "Series",
+                "poster": "https://placehold.co/300x450/f59e0b/ffffff?text=Breaking+Bad",
+                "rating": 5,
+                "notes": "Perfect series! Amazing character development."
+            },
+            {
+                "id": 6,
+                "title": "The Dark Knight",
+                "year": "2008",
+                "genre": "Action",
+                "poster": "https://placehold.co/300x450/ef4444/ffffff?text=Dark+Knight",
+                "rating": 5,
+                "notes": "Heath Ledger's performance was incredible."
+            },
+            {
+                "id": 7,
+                "title": "Game of Thrones",
+                "year": "2011",
+                "genre": "Series",
+                "poster": "https://placehold.co/300x450/8b5cf6/ffffff?text=Game+of+Thrones",
+                "rating": 4,
+                "notes": "First 6 seasons were amazing."
+            }
+        ]
+    },
+    "links": [
+        {
+            "id": 1,
+            "title": "GitHub Profile",
+            "url": "https://github.com",
+            "description": "My open source contributions",
+            "tags": [
+                "development",
+                "code"
+            ],
+            "category": "important",
+            "favicon": "https://github.com/favicon.ico"
+        },
+        {
+            "id": 2,
+            "title": "MDN Web Docs",
+            "url": "https://developer.mozilla.org",
+            "description": "Best web development reference",
+            "tags": [
+                "development",
+                "learning"
+            ],
+            "category": "resources",
+            "favicon": ""
+        },
+        {
+            "id": 3,
+            "title": "CSS-Tricks",
+            "url": "https://css-tricks.com",
+            "description": "CSS tips and tutorials",
+            "tags": [
+                "design",
+                "css",
+                "learning"
+            ],
+            "category": "resources",
+            "favicon": ""
+        },
+        {
+            "id": 4,
+            "title": "Spotify Web Player",
+            "url": "https://open.spotify.com",
+            "description": "My music library",
+            "tags": [
+                "music",
+                "entertainment"
+            ],
+            "category": "entertainment",
+            "favicon": ""
+        },
+        {
+            "id": 5,
+            "title": "Design Inspiration",
+            "url": "https://dribbble.com",
+            "description": "UI/UX design ideas",
+            "tags": [
+                "design",
+                "inspiration"
+            ],
+            "category": "resources",
+            "favicon": ""
+        }
+    ],
+    "gallery": [
+        {
+            "id": 1,
+            "src": "https://placehold.co/800x600/a855f7/ffffff?text=Beautiful+Sunset",
+            "thumbnail": "https://placehold.co/400x300/a855f7/ffffff?text=Sunset",
+            "caption": "Beautiful Sunset",
+            "alt": "Sunset over mountains",
+            "width": 800,
+            "height": 600,
+            "timestamp": 1701000000000,
+            "tags": [
+                "nature",
+                "sunset",
+                "landscape"
+            ]
+        },
+        {
+            "id": 2,
+            "src": "https://placehold.co/800x1200/ec4899/ffffff?text=Mountain+View",
+            "thumbnail": "https://placehold.co/400x600/ec4899/ffffff?text=Mountain",
+            "caption": "Mountain View",
+            "alt": "Snow-capped mountain peak",
+            "width": 800,
+            "height": 1200,
+            "timestamp": 1701001000000,
+            "tags": [
+                "nature",
+                "mountain",
+                "landscape"
+            ]
+        },
+        {
+            "id": 3,
+            "src": "https://placehold.co/800x600/3b82f6/ffffff?text=City+Lights",
+            "thumbnail": "https://placehold.co/400x300/3b82f6/ffffff?text=City",
+            "caption": "City Lights",
+            "alt": "City skyline at night",
+            "width": 800,
+            "height": 600,
+            "timestamp": 1701002000000,
+            "tags": [
+                "city",
+                "night",
+                "urban"
+            ]
+        },
+        {
+            "id": 4,
+            "src": "https://placehold.co/800x1000/14b8a6/ffffff?text=Beach+Waves",
+            "thumbnail": "https://placehold.co/400x500/14b8a6/ffffff?text=Beach",
+            "caption": "Beach Waves",
+            "alt": "Ocean waves on sandy beach",
+            "width": 800,
+            "height": 1000,
+            "timestamp": 1701003000000,
+            "tags": [
+                "nature",
+                "beach",
+                "ocean"
+            ]
+        },
+        {
+            "id": 5,
+            "src": "https://placehold.co/800x600/f59e0b/ffffff?text=Forest+Path",
+            "thumbnail": "https://placehold.co/400x300/f59e0b/ffffff?text=Forest",
+            "caption": "Forest Path",
+            "alt": "Path through dense forest",
+            "width": 800,
+            "height": 600,
+            "timestamp": 1701004000000,
+            "tags": [
+                "nature",
+                "forest",
+                "trees"
+            ]
+        },
+        {
+            "id": 6,
+            "src": "https://placehold.co/800x1200/ef4444/ffffff?text=Starry+Night",
+            "thumbnail": "https://placehold.co/400x600/ef4444/ffffff?text=Stars",
+            "caption": "Starry Night",
+            "alt": "Night sky filled with stars",
+            "width": 800,
+            "height": 1200,
+            "timestamp": 1701005000000,
+            "tags": [
+                "night",
+                "stars",
+                "sky"
+            ]
+        },
+        {
+            "id": 7,
+            "src": "https://placehold.co/800x600/8b5cf6/ffffff?text=Desert+Dunes",
+            "thumbnail": "https://placehold.co/400x300/8b5cf6/ffffff?text=Desert",
+            "caption": "Desert Dunes",
+            "alt": "Sand dunes in the desert",
+            "width": 800,
+            "height": 600,
+            "timestamp": 1701006000000,
+            "tags": [
+                "nature",
+                "desert",
+                "sand"
+            ]
+        },
+        {
+            "id": 8,
+            "src": "https://placehold.co/800x1000/10b981/ffffff?text=Winter+Snow",
+            "thumbnail": "https://placehold.co/400x500/10b981/ffffff?text=Snow",
+            "caption": "Winter Snow",
+            "alt": "Snowy winter landscape",
+            "width": 800,
+            "height": 1000,
+            "timestamp": 1701007000000,
+            "tags": [
+                "nature",
+                "winter",
+                "snow"
+            ]
+        }
+    ],
+    "music": [
+        {
+            "id": 1,
+            "title": "Summer Vibes",
+            "artist": "Artist Name",
+            "album": "Best Hits",
+            "duration": 243,
+            "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            "artwork": "https://placehold.co/300x300/a855f7/ffffff?text=🎵",
+            "genre": "Pop"
+        },
+        {
+            "id": 2,
+            "title": "Chill Beats",
+            "artist": "Another Artist",
+            "album": "Relaxation",
+            "duration": 198,
+            "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+            "artwork": "https://placehold.co/300x300/ec4899/ffffff?text=🎸",
+            "genre": "Chill"
+        },
+        {
+            "id": 3,
+            "title": "Relaxing Jazz",
+            "artist": "Jazz Ensemble",
+            "album": "Jazz Classics",
+            "duration": 276,
+            "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+            "artwork": "https://placehold.co/300x300/3b82f6/ffffff?text=🎹",
+            "genre": "Jazz"
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "E-Commerce Platform",
+            "description": "Modern online store with cart functionality and payment integration",
+            "fullDescription": "A full-featured e-commerce platform built with React and Node.js. Features include user authentication, product catalog, shopping cart, checkout process, payment integration with Stripe, order management, and admin dashboard. The platform is fully responsive and optimized for performance.",
+            "image": "https://placehold.co/800x500/a855f7/ffffff?text=E-Commerce",
+            "tech": [
+                "React",
+                "Node.js",
+                "MongoDB",
+                "Stripe",
+                "Redux"
+            ],
+            "github": "https://github.com/username/ecommerce",
+            "demo": "https://demo.example.com",
+            "featured": true
+        },
+        {
+            "id": 2,
+            "title": "Task Management App",
+            "description": "Productivity tool to organize tasks, set deadlines, and track progress",
+            "fullDescription": "A comprehensive task management application built with Vue.js and Firebase. Features include task creation, categorization, priority levels, due dates, collaboration features, real-time updates, and progress tracking. The app uses Tailwind CSS for a modern, clean interface.",
+            "image": "https://placehold.co/800x500/ec4899/ffffff?text=Task+Manager",
+            "tech": [
+                "Vue.js",
+                "Firebase",
+                "Tailwind CSS",
+                "Vuex"
+            ],
+            "github": "https://github.com/username/tasks",
+            "demo": "https://tasks.example.com",
+            "featured": true
+        },
+        {
+            "id": 3,
+            "title": "Weather Dashboard",
+            "description": "Real-time weather information with beautiful visualizations",
+            "fullDescription": "A weather dashboard that displays real-time weather data using OpenWeatherMap API. Features include current weather conditions, 7-day forecast, hourly predictions, weather maps, and beautiful visualizations using Chart.js. Built with vanilla JavaScript.",
+            "image": "https://placehold.co/800x500/3b82f6/ffffff?text=Weather",
+            "tech": [
+                "JavaScript",
+                "OpenWeather API",
+                "Chart.js",
+                "CSS Grid"
+            ],
+            "github": "https://github.com/username/weather",
+            "demo": "https://weather.example.com",
+            "featured": false
+        },
+        {
+            "id": 4,
+            "title": "Social Media Platform",
+            "description": "Connect with friends, share photos, and engage in conversations",
+            "fullDescription": "A full-stack social media platform built with Next.js and PostgreSQL. Features include user profiles, friend connections, photo sharing, likes and comments, real-time chat, notifications, and a news feed algorithm. Deployed on AWS.",
+            "image": "https://placehold.co/800x500/14b8a6/ffffff?text=Social",
+            "tech": [
+                "Next.js",
+                "PostgreSQL",
+                "AWS",
+                "Socket.io",
+                "Redis"
+            ],
+            "github": "https://github.com/username/social",
+            "demo": "https://social.example.com",
+            "featured": true
+        }
+    ],
+    "settings": {
+        "theme": "dark",
+        "accentColor": "purple",
+        "fontFamily": "Inter",
+        "cardStyle": "default",
+        "enableGoogleFonts": true,
+        "privacyMode": false,
+        "analyticsEnabled": false
+    },
+    "analytics": {
+        "pageViews": 0,
+        "notesCreated": 0,
+        "searchesPerformed": 0,
+        "musicPlayed": 0,
+        "galleryViewed": 0
+    }
+}

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ================================================
+         META TAGS
+         Essential information for browsers and SEO
+    ================================================= -->
+    <meta charset="UTF-8"> <!-- Character encoding for proper text display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes website responsive on all devices -->
+    <meta name="description" content="Premium personal portfolio website with interactive features">
+    
+    <!-- Page Title shown in browser tab -->
+    <title>Premium Portfolio | Bablu Kumar</title>
+    
+    <!-- ================================================
+         EXTERNAL RESOURCES
+         CSS and icon libraries
+    ================================================= -->
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================================================
+         HEADER / TOP NAVIGATION BAR
+         Contains logo, theme toggle, search, and settings
+    ================================================= -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <!-- Logo/Brand -->
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>Portfolio</span>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="header-controls">
+                <!-- Search Button -->
+                <button class="icon-btn" id="searchToggle" aria-label="Toggle Search">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <!-- Dark/Light Mode Toggle -->
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <!-- Settings Button -->
+                <button class="icon-btn" id="settingsToggle" aria-label="Open Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+
+                <!-- Hamburger Menu Button -->
+                <button class="icon-btn hamburger" id="menuToggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================================================
+         SIDE NAVIGATION MENU
+         Slides in from left when hamburger is clicked
+    ================================================= -->
+    <nav class="side-nav" id="sideNav">
+        <div class="side-nav-header">
+            <h3>Navigation</h3>
+            <button class="close-btn" id="closeSideNav" aria-label="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="side-nav-list">
+            <li><a href="#hero" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#projects" class="nav-link"><i class="fas fa-briefcase"></i> Projects</a></li>
+            <li><a href="#notes" class="nav-link"><i class="fas fa-sticky-note"></i> Notes</a></li>
+            <li><a href="#links" class="nav-link"><i class="fas fa-link"></i> Links</a></li>
+            <li><a href="#music" class="nav-link"><i class="fas fa-music"></i> Music</a></li>
+            <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+            <li><a href="#watchlist" class="nav-link"><i class="fas fa-film"></i> Watchlist</a></li>
+        </ul>
+    </nav>
+
+    <!-- Side navigation overlay (blurred background) -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ================================================
+         SEARCH OVERLAY
+         Full-screen search with real-time filtering
+    ================================================= -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <div class="search-header">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search notes, projects, links, music, watchlist..." autocomplete="off">
+                <button class="close-search" id="closeSearch" aria-label="Close Search">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- Search results will be dynamically inserted here -->
+            <div class="search-results" id="searchResults">
+                <p class="search-hint">Start typing to search...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================
+         MAIN CONTENT
+         All page sections go here
+    ================================================= -->
+    <main class="main-content">
+
+        <!-- ================================================
+             HERO SECTION
+             Introduction and welcome area
+        ================================================= -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <!-- Profile Image -->
+                <div class="hero-image" data-reveal="fade-up">
+                    <img src="C:\Users\ASUS\CrossDevice\CMF by Nothing Phone 2 Pro\storage\DCIM\Google Photos\20251122_173344-IMG_STYLE~2.jpg" alt="Profile Picture" class="profile-pic">
+                    <div class="profile-ring"></div> <!-- Decorative animated ring -->
+                </div>
+
+                <!-- Hero Content -->
+                <div class="hero-content" data-reveal="fade-up" data-delay="200">
+                    <h1 class="hero-title">Hi, I'm <span class="gradient-text">Bablu Kumar</span></h1>
+                    <p class="hero-subtitle">Full Stack Developer | Creative Designer | Tech Enthusiast</p>
+                    <p class="hero-description">
+                        Passionate about building beautiful and functional web experiences that make a difference.
+                        Welcome to my digital space where I share my projects, thoughts, and creative work.
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/bablu0703/" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/bablu-kumar-166010233/" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/bablu456" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/bablu0703" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             PROJECTS SECTION
+             Showcase portfolio projects
+        ================================================= -->
+        <section class="section" id="projects">
+            <div class="container">
+                <h2 class="section-title" data-reveal="fade-up">Featured Projects</h2>
+                <p class="section-subtitle" data-reveal="fade-up" data-delay="100">Check out some of my recent work</p>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <div class="project-card" data-reveal="scale-up" data-delay="0">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/a855f7/ffffff?text=E-Commerce" alt="E-Commerce Website">
+                            <div class="project-overlay">
+                                <button class="btn-primary view-project" data-project="0">View Details</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">E-Commerce Platform</h3>
+                            <p class="project-description">Modern online store with cart functionality and payment integration</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card" data-reveal="scale-up" data-delay="100">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/ec4899/ffffff?text=Task+Manager" alt="Task Manager App">
+                            <div class="project-overlay">
+                                <button class="btn-primary view-project" data-project="1">View Details</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Task Management App</h3>
+                            <p class="project-description">Productivity tool to organize tasks, set deadlines, and track progress</p>
+                            <div class="project-tags">
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card" data-reveal="scale-up" data-delay="200">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Weather+App" alt="Weather Dashboard">
+                            <div class="project-overlay">
+                                <button class="btn-primary view-project" data-project="2">View Details</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Weather Dashboard</h3>
+                            <p class="project-description">Real-time weather information with beautiful visualizations</p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">API</span>
+                                <span class="tag">Chart.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card" data-reveal="scale-up" data-delay="300">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/14b8a6/ffffff?text=Social+Media" alt="Social Media App">
+                            <div class="project-overlay">
+                                <button class="btn-primary view-project" data-project="3">View Details</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Social Media Platform</h3>
+                            <p class="project-description">Connect with friends, share photos, and engage in conversations</p>
+                            <div class="project-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             NOTES SECTION
+             Dynamic notes with add/edit/delete functionality
+        ================================================= -->
+        <section class="section" id="notes">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title" data-reveal="fade-up">Personal Notes</h2>
+                        <p class="section-subtitle" data-reveal="fade-up" data-delay="100">Quick thoughts and reminders</p>
+                    </div>
+                    <button class="btn-primary" id="addNoteBtn" data-reveal="fade-up" data-delay="200">
+                        <i class="fas fa-plus"></i> Add Note
+                    </button>
+                </div>
+
+                <!-- Notes Grid (populated dynamically from localStorage) -->
+                <div class="notes-grid" id="notesGrid">
+                    <!-- Notes will be inserted here by JavaScript -->
+                </div>
+
+                <!-- Empty State (shown when no notes exist) -->
+                <div class="empty-state" id="notesEmptyState" style="display: none;">
+                    <i class="fas fa-sticky-note"></i>
+                    <p>No notes yet. Click "Add Note" to create your first note!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             LINKS SECTION
+             Collection of important URLs and resources
+        ================================================= -->
+        <section class="section" id="links">
+            <div class="container">
+                <h2 class="section-title" data-reveal="fade-up">Important Links</h2>
+                <p class="section-subtitle" data-reveal="fade-up" data-delay="100">My curated collection of resources</p>
+
+                <!-- Links Grid -->
+                <div class="links-grid">
+                    <!-- Link Category: Important URLs -->
+                    <div class="link-card" data-reveal="fade-up" data-delay="0">
+                        <div class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3 class="link-title">Important URLs</h3>
+                        <ul class="link-list">
+                            <li><a href="#" target="_blank">GitHub Repository</a></li>
+                            <li><a href="#" target="_blank">Documentation Portal</a></li>
+                            <li><a href="#" target="_blank">Design Resources</a></li>
+                            <li><a href="#" target="_blank">API Reference</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Link Category: Videos -->
+                    <div class="link-card" data-reveal="fade-up" data-delay="100">
+                        <div class="link-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="link-title">Favorite Videos</h3>
+                        <ul class="link-list">
+                            <li><a href="#" target="_blank">Tutorial: Advanced CSS</a></li>
+                            <li><a href="#" target="_blank">TED Talk: Innovation</a></li>
+                            <li><a href="#" target="_blank">Music Video Collection</a></li>
+                            <li><a href="#" target="_blank">Tech Conference 2024</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Link Category: Download Sites -->
+                    <div class="link-card" data-reveal="fade-up" data-delay="200">
+                        <div class="link-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3 class="link-title">Download Sites</h3>
+                        <ul class="link-list">
+                            <li><a href="#" target="_blank">Software Repository</a></li>
+                            <li><a href="#" target="_blank">Asset Library</a></li>
+                            <li><a href="#" target="_blank">Font Collections</a></li>
+                            <li><a href="#" target="_blank">Icon Packs</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Link Category: Music Links -->
+                    <div class="link-card" data-reveal="fade-up" data-delay="300">
+                        <div class="link-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h3 class="link-title">Music Links</h3>
+                        <ul class="link-list">
+                            <li><a href="#" target="_blank">Spotify Playlist</a></li>
+                            <li><a href="#" target="_blank">YouTube Music</a></li>
+                            <li><a href="#" target="_blank">SoundCloud Favorites</a></li>
+                            <li><a href="#" target="_blank">Apple Music</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             MUSIC PLAYER SECTION
+             Custom music players with controls
+        ================================================= -->
+        <section class="section" id="music">
+            <div class="container">
+                <h2 class="section-title" data-reveal="fade-up">Music Player</h2>
+                <p class="section-subtitle" data-reveal="fade-up" data-delay="100">Listen to my favorite tracks</p>
+
+                <!-- Music Players Grid -->
+                <div class="music-grid">
+                    <!-- Music Player 1 -->
+                    <div class="music-player" data-reveal="scale-up" data-delay="0">
+                        <div class="music-artwork">
+                            <img src="https://placehold.co/300x300/a855f7/ffffff?text=🎵" alt="Album Art">
+                            <div class="music-disc rotating-paused">
+                                <i class="fas fa-compact-disc"></i>
+                            </div>
+                        </div>
+                        <div class="music-info">
+                            <h3 class="music-title">Summer Vibes</h3>
+                            <p class="music-artist">Artist Name</p>
+                        </div>
+                        <div class="music-controls">
+                            <button class="play-btn" data-track="0">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-track="0"></div>
+                                </div>
+                                <div class="time-display">
+                                    <span class="current-time">0:00</span>
+                                    <span class="total-time">0:00</span>
+                                </div>
+                            </div>
+                            <div class="volume-control">
+                                <i class="fas fa-volume-up"></i>
+                                <input type="range" class="volume-slider" min="0" max="100" value="70" data-track="0">
+                            </div>
+                        </div>
+                        <!-- Hidden audio element -->
+                        <audio class="audio-element" data-track="0">
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <!-- Music Player 2 -->
+                    <div class="music-player" data-reveal="scale-up" data-delay="100">
+                        <div class="music-artwork">
+                            <img src="https://placehold.co/300x300/ec4899/ffffff?text=🎸" alt="Album Art">
+                            <div class="music-disc rotating-paused">
+                                <i class="fas fa-compact-disc"></i>
+                            </div>
+                        </div>
+                        <div class="music-info">
+                            <h3 class="music-title">Chill Beats</h3>
+                            <p class="music-artist">Another Artist</p>
+                        </div>
+                        <div class="music-controls">
+                            <button class="play-btn" data-track="1">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-track="1"></div>
+                                </div>
+                                <div class="time-display">
+                                    <span class="current-time">0:00</span>
+                                    <span class="total-time">0:00</span>
+                                </div>
+                            </div>
+                            <div class="volume-control">
+                                <i class="fas fa-volume-up"></i>
+                                <input type="range" class="volume-slider" min="0" max="100" value="70" data-track="1">
+                            </div>
+                        </div>
+                        <audio class="audio-element" data-track="1">
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <!-- Music Player 3 -->
+                    <div class="music-player" data-reveal="scale-up" data-delay="200">
+                        <div class="music-artwork">
+                            <img src="https://placehold.co/300x300/3b82f6/ffffff?text=🎹" alt="Album Art">
+                            <div class="music-disc rotating-paused">
+                                <i class="fas fa-compact-disc"></i>
+                            </div>
+                        </div>
+                        <div class="music-info">
+                            <h3 class="music-title">Relaxing Jazz</h3>
+                            <p class="music-artist">Jazz Ensemble</p>
+                        </div>
+                        <div class="music-controls">
+                            <button class="play-btn" data-track="2">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-track="2"></div>
+                                </div>
+                                <div class="time-display">
+                                    <span class="current-time">0:00</span>
+                                    <span class="total-time">0:00</span>
+                                </div>
+                            </div>
+                            <div class="volume-control">
+                                <i class="fas fa-volume-up"></i>
+                                <input type="range" class="volume-slider" min="0" max="100" value="70" data-track="2">
+                            </div>
+                        </div>
+                        <audio class="audio-element" data-track="2">
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             PHOTO GALLERY SECTION
+             Masonry grid with lightbox viewer
+        ================================================= -->
+        <section class="section" id="gallery">
+            <div class="container">
+                <h2 class="section-title" data-reveal="fade-up">Photo Gallery</h2>
+                <p class="section-subtitle" data-reveal="fade-up" data-delay="100">Captured moments and memories</p>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid">
+                    <!-- Gallery items with different colors for visual appeal -->
+                    <div class="gallery-item" data-reveal="fade-up" data-delay="0" data-index="0">
+                        <img src="https://placehold.co/400x400/a855f7/ffffff?text=Photo+1" alt="Gallery Photo 1">
+                        <div class="gallery-overlay">
+                            <button class="gallery-view-btn">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <p class="gallery-caption">Beautiful Sunset</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-reveal="fade-up" data-delay="50" data-index="1">
+                        <img src="https://placehold.co/400x600/ec4899/ffffff?text=Photo+2" alt="Gallery Photo 2">
+                        <div class="gallery-overlay">
+                            <button class="gallery-view-btn">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <p class="gallery-caption">Mountain View</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-reveal="fade-up" data-delay="100" data-index="2">
+                        <img src="https://placehold.co/400x400/3b82f6/ffffff?text=Photo+3" alt="Gallery Photo 3">
+                        <div class="gallery-overlay">
+                            <button class="gallery-view-btn">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <p class="gallery-caption">City Lights</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-reveal="fade-up" data-delay="150" data-index="3">
+                        <img src="https://placehold.co/400x500/14b8a6/ffffff?text=Photo+4" alt="Gallery Photo 4">
+                        <div class="gallery-overlay">
+                            <button class="gallery-view-btn">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <p class="gallery-caption">Beach Waves</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-reveal="fade-up" data-delay="200" data-index="4">
+                        <img src="https://placehold.co/400x400/f59e0b/ffffff?text=Photo+5" alt="Gallery Photo 5">
+                        <div class="gallery-overlay">
+                            <button class="gallery-view-btn">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <p class="gallery-caption">Forest Path</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-reveal="fade-up" data-delay="250" data-index="5">
+                        <img src="https://placehold.co/400x600/ef4444/ffffff?text=Photo+6" alt="Gallery Photo 6">
+                        <div class="gallery-overlay">
+                            <button class="gallery-view-btn">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <p class="gallery-caption">Starry Night</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-reveal="fade-up" data-delay="300" data-index="6">
+                        <img src="https://placehold.co/400x400/8b5cf6/ffffff?text=Photo+7" alt="Gallery Photo 7">
+                        <div class="gallery-overlay">
+                            <button class="gallery-view-btn">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <p class="gallery-caption">Desert Dunes</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-reveal="fade-up" data-delay="350" data-index="7">
+                        <img src="https://placehold.co/400x500/10b981/ffffff?text=Photo+8" alt="Gallery Photo 8">
+                        <div class="gallery-overlay">
+                            <button class="gallery-view-btn">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <p class="gallery-caption">Winter Snow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             WATCHLIST SECTION
+             Movies/series tracker with drag-and-drop
+        ================================================= -->
+        <section class="section" id="watchlist">
+            <div class="container">
+                <h2 class="section-title" data-reveal="fade-up">My Watchlist</h2>
+                <p class="section-subtitle" data-reveal="fade-up" data-delay="100">Movies and series tracker</p>
+
+                <!-- Watchlist Container -->
+                <div class="watchlist-container">
+                    <!-- Want to Watch Section -->
+                    <div class="watchlist-category" data-reveal="fade-up" data-delay="0">
+                        <div class="watchlist-header">
+                            <h3 class="watchlist-title">
+                                <i class="fas fa-clock"></i>
+                                Want to Watch
+                            </h3>
+                            <button class="btn-secondary" id="addToWantBtn">
+                                <i class="fas fa-plus"></i> Add Movie
+                            </button>
+                        </div>
+                        <div class="watchlist-grid" id="wantToWatchGrid" data-category="wantToWatch">
+                            <!-- Watchlist items will be inserted here dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Already Watched Section -->
+                    <div class="watchlist-category" data-reveal="fade-up" data-delay="200">
+                        <div class="watchlist-header">
+                            <h3 class="watchlist-title">
+                                <i class="fas fa-check-circle"></i>
+                                Already Watched
+                            </h3>
+                            <button class="btn-secondary" id="addToWatchedBtn">
+                                <i class="fas fa-plus"></i> Add Movie
+                            </button>
+                        </div>
+                        <div class="watchlist-grid" id="watchedGrid" data-category="watched">
+                            <!-- Watchlist items will be inserted here dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================================================
+         FOOTER
+         Copyright and social links
+    ================================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Bablu Kumar . All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/bablu0703/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/bablu-kumar-166010233/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/bablu456" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/bablu0703" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================================================
+         MODALS & OVERLAYS
+         Pop-up windows for various features
+    ================================================= -->
+
+    <!-- Gallery Lightbox Modal -->
+    <div class="modal" id="galleryModal">
+        <button class="modal-close" id="closeGalleryModal" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="modal-nav prev" id="prevPhoto" aria-label="Previous Photo">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="modal-nav next" id="nextPhoto" aria-label="Next Photo">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Gallery Photo">
+            <p class="modal-caption" id="modalCaption"></p>
+            <p class="modal-counter" id="modalCounter"></p>
+        </div>
+    </div>
+
+    <!-- Project Details Modal -->
+    <div class="modal" id="projectModal">
+        <button class="modal-close" id="closeProjectModal" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-content modal-content-project">
+            <div id="projectDetails">
+                <!-- Project details will be inserted here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Panel Modal -->
+    <div class="modal" id="settingsModal">
+        <button class="modal-close" id="closeSettingsModal" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-content modal-content-settings">
+            <h2 class="modal-title"><i class="fas fa-cog"></i> Settings</h2>
+            
+            <!-- Theme Color Setting -->
+            <div class="setting-group">
+                <h3 class="setting-label">Theme Color</h3>
+                <div class="color-options">
+                    <button class="color-option" data-color="purple" style="background: #a855f7;">
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="color-option" data-color="blue" style="background: #3b82f6;">
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="color-option" data-color="pink" style="background: #ec4899;">
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="color-option" data-color="green" style="background: #10b981;">
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="color-option" data-color="orange" style="background: #f59e0b;">
+                        <i class="fas fa-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Font Style Setting -->
+            <div class="setting-group">
+                <h3 class="setting-label">Font Style</h3>
+                <div class="font-options">
+                    <button class="font-option" data-font="Inter">Inter</button>
+                    <button class="font-option" data-font="Poppins">Poppins</button>
+                    <button class="font-option" data-font="Outfit">Outfit</button>
+                </div>
+            </div>
+
+            <!-- Card Style Setting -->
+            <div class="setting-group">
+                <h3 class="setting-label">Card Style</h3>
+                <div class="card-style-options">
+                    <button class="card-style-option" data-style="default">Default</button>
+                    <button class="card-style-option" data-style="bordered">Bordered</button>
+                    <button class="card-style-option" data-style="elevated">Elevated</button>
+                    <button class="card-style-option" data-style="minimal">Minimal</button>
+                </div>
+            </div>
+
+            <!-- Reset Button -->
+            <button class="btn-danger" id="resetSettings">
+                <i class="fas fa-undo"></i> Reset to Defaults
+            </button>
+        </div>
+    </div>
+
+    <!-- Add Note Modal -->
+    <div class="modal" id="noteModal">
+        <button class="modal-close" id="closeNoteModal" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-content modal-content-note">
+            <h2 class="modal-title" id="noteModalTitle"><i class="fas fa-sticky-note"></i> Add Note</h2>
+            <textarea id="noteInput" class="note-textarea" placeholder="Write your note here..." rows="6"></textarea>
+            <div class="modal-actions">
+                <button class="btn-secondary" id="cancelNote">Cancel</button>
+                <button class="btn-primary" id="saveNote">Save Note</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Watchlist Item Modal -->
+    <div class="modal" id="watchlistModal">
+        <button class="modal-close" id="closeWatchlistModal" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-content modal-content-watchlist">
+            <h2 class="modal-title"><i class="fas fa-film"></i> Add to Watchlist</h2>
+            <form id="watchlistForm">
+                <div class="form-group">
+                    <label for="movieTitle">Title</label>
+                    <input type="text" id="movieTitle" class="form-input" placeholder="Movie/Series Title" required>
+                </div>
+                <div class="form-group">
+                    <label for="movieYear">Year</label>
+                    <input type="text" id="movieYear" class="form-input" placeholder="2024" required>
+                </div>
+                <div class="form-group">
+                    <label for="movieGenre">Genre</label>
+                    <input type="text" id="movieGenre" class="form-input" placeholder="Action, Drama, etc." required>
+                </div>
+                <div class="form-group">
+                    <label for="moviePoster">Poster URL (optional)</label>
+                    <input type="url" id="moviePoster" class="form-input" placeholder="https://...">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelWatchlist">Cancel</button>
+                    <button type="submit" class="btn-primary">Add to List</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================================================
+         JAVASCRIPT
+         Link to external script file
+    ================================================= -->
+    <script src="script.js"></script>
+
+</body>
+</html>
