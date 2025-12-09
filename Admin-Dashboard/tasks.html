@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2 class="logo">Dashboard</h2>
+        <ul class="menu">
+            <li><a href="index.html">🏠 Dashboard</a></li>
+            <li><a href="users.html">👤 Users</a></li>
+            <li><a href="tasks.html" class="active">📝 Tasks</a></li>
+            <li><a href="gallery.html">🖼 Gallery</a></li>
+            <li><a href="add-product.html">➕ Add Product</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+        <div class="header">
+            <h1>Task Manager</h1>
+        </div>
+
+        <!-- Task Input Box -->
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter task...">
+            <button id="addBtn">Add Task</button>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list" id="taskList">
+            <!-- Tasks will appear here -->
+        </div>
+    </div>
+
+    <script src="js/tasks.js"></script>
+</body>
+</html>

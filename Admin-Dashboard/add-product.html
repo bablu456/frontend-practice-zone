@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2 class="logo">Dashboard</h2>
+        <ul class="menu">
+            <li><a href="index.html">🏠 Dashboard</a></li>
+            <li><a href="users.html">👤 Users</a></li>
+            <li><a href="tasks.html">📝 Tasks</a></li>
+            <li><a href="gallery.html">🖼 Gallery</a></li>
+            <li><a href="add-product.html" class="active">➕ Add Product</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+        <div class="header">
+            <h1>Add Product</h1>
+        </div>
+
+        <div class="product-wrapper">
+
+            <!-- PRODUCT FORM -->
+            <div class="product-form">
+                <input id="pName" type="text" placeholder="Product Name">
+                <input id="pPrice" type="number" placeholder="Product Price">
+                <textarea id="pDesc" placeholder="Product Description"></textarea>
+                <input id="pImg" type="text" placeholder="Image URL">
+
+                <button id="addProductBtn">Add Product</button>
+            </div>
+
+            <!-- PRODUCT PREVIEW -->
+            <div class="product-preview" id="productPreview">
+                <h2>Preview</h2>
+                <p>Fill the form to preview the product.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/product.js"></script>
+</body>
+</html>

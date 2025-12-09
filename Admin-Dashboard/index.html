@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2 class="logo">Dashboard</h2>
+        <ul class="menu">
+            <li><a href="index.html" class="active">🏠 Dashboard</a></li>
+            <li><a href="users.html">👤 Users</a></li>
+            <li><a href="tasks.html">📝 Tasks</a></li>
+            <li><a href="gallery.html">🖼 Gallery</a></li>
+            <li><a href="add-product.html">➕ Add Product</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <h1>Welcome to Admin Dashboard</h1>
+        </div>
+
+       <div class="content">
+    <div class="card" id="userCount">Users: 0</div>
+    <div class="card" id="taskCount">Tasks: 0</div>
+    <div class="card" id="photoCount">Photos: 0</div>
+    <div class="card" id="productCount">Products: 0</div>
+        </div>
+
+    </div>
+
+</body>
+<script src="js/dashboard.js"></script>
+
+</html>
