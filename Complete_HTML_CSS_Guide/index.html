@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<!-- DOCTYPE tells the browser this is HTML5 document - the latest version of HTML -->
+<html lang="en">
+<!-- <html> is the root tag that wraps all content. lang="en" tells search engines this page is in English -->
+
+<head>
+    <!-- <head> contains metadata (information about the page) that doesn't show on the page itself -->
+    
+    <meta charset="UTF-8">
+    <!-- charset="UTF-8" means the page can display all languages and special characters correctly -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport meta tag makes the website responsive (work well on phones, tablets, computers) -->
+    
+    <meta name="description" content="Complete guide showing all HTML tags and CSS properties with explanations">
+    <!-- description meta tag tells search engines what this page is about -->
+    
+    <title>Complete HTML & CSS Guide</title>
+    <!-- <title> shows the page name in browser tab and search results -->
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- <link> connects the HTML file to the CSS file for styling -->
+    
+</head>
+
+<body>
+    <!-- <body> contains all the visible content that users see on the page -->
+    
+    <!-- ==================== HEADER SECTION ==================== -->
+    <header>
+        <!-- <header> is a semantic tag that represents the top section of page, usually contains logo and navigation -->
+        
+        <nav>
+            <!-- <nav> is a semantic tag specifically for navigation links (menu) -->
+            
+            <ul>
+                <!-- <ul> means "unordered list" - creates a list with bullet points -->
+                
+                <li><a href="#home">Home</a></li>
+                <!-- <li> means "list item" - each item in the list -->
+                <!-- <a> creates a clickable link. href="#home" links to section with id="home" -->
+                
+                <li><a href="#text">Text Tags</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#semantic">Semantic Tags</a></li>
+                <li><a href="#footer">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <!-- <main> is a semantic tag that wraps the main content of the page -->
+        
+        <!-- ==================== HOME SECTION ==================== -->
+        <section id="home">
+            <!-- <section> groups related content together. id="home" creates an anchor point for navigation -->
+            
+            <h1>Welcome to Complete HTML & CSS Learning Guide</h1>
+            <!-- <h1> is the largest heading - represents the main title. Only one <h1> per page is best practice -->
+            
+            <p>
+                This page demonstrates all commonly used HTML tags and CSS properties with explanations.
+                Learn how to build websites by understanding each element's purpose.
+            </p>
+            <!-- <p> means "paragraph" - used for blocks of text content -->
+            
+            <img src="https://via.placeholder.com/400x200" alt="Learning HTML and CSS">
+            <!-- <img> displays an image. src is the image location, alt is text shown if image doesn't load -->
+            
+        </section>
+        
+        <!-- ==================== TEXT FORMATTING SECTION ==================== -->
+        <section id="text">
+            <!-- <section> creates a distinct, thematic grouping of content -->
+            
+            <h2>Text Formatting Tags</h2>
+            <!-- <h2> is a subheading - smaller than h1, used for section titles -->
+            
+            <article>
+                <!-- <article> is a semantic tag for independent, self-contained content like blog posts -->
+                
+                <h3>Basic Text Tags</h3>
+                <!-- <h3> is smaller than h2, used for sub-section titles (h4, h5, h6 exist too) -->
+                
+                <p>
+                    <strong>Strong tag:</strong> This text is wrapped in <strong>strong tag</strong>, which makes it bold and tells search engines it's important.
+                </p>
+                
+                <p>
+                    <em>Emphasis tag:</em> This text is in <em>em tag</em>, which makes it italic and emphasizes meaning.
+                </p>
+                
+                <p>
+                    <u>Underline:</u> This text uses <u>u tag</u> which underlines text (use sparingly as it can confuse with links).
+                </p>
+                
+                <p>
+                    <mark>Highlighted text:</mark> The <mark>mark tag</mark> highlights text with yellow background, like a marker pen.
+                </p>
+                
+                <p>
+                    <small>Small text:</small> The <small>small tag</small> makes text smaller - useful for fine print.
+                </p>
+                
+                <p>
+                    <del>Deleted text:</del> The <del>del tag</del> shows strikethrough - useful to show removed content.
+                </p>
+                
+                <p>
+                    <ins>Inserted text:</ins> The <ins>ins tag</ins> shows underline - useful to show added content.
+                </p>
+                
+                <p>
+                    <code>Code tag:</code> The <code>code tag</code> displays text in monospace font, used for computer code.
+                </p>
+                
+                <p>
+                    Formula: H<sub>2</sub>O uses <sub>sub tag</sub> for subscript (text below the line).
+                </p>
+                
+                <p>
+                    E=mc<sup>2</sup> uses <sup>sup tag</sup> for superscript (text above the line).
+                </p>
+                
+            </article>
+            
+        </section>
+        
+        <!-- ==================== LISTS SECTION ==================== -->
+        <section id="lists">
+            
+            <h2>List Tags</h2>
+            
+            <article>
+                
+                <h3>Unordered List (Bullet Points)</h3>
+                <!-- Unordered list doesn't need a specific order -->
+                
+                <ul>
+                    <!-- <ul> creates an unordered (bulleted) list -->
+                    
+                    <li>First item - bullet point</li>
+                    <!-- Each <li> (list item) gets a bullet -->
+                    
+                    <li>Second item - another bullet</li>
+                    <li>Third item - even more bullets</li>
+                    
+                    <li>
+                        <!-- Lists can be nested (placed inside each other) -->
+                        Parent item with children:
+                        <ul>
+                            <!-- Nested (inner) unordered list -->
+                            <li>Child item 1</li>
+                            <li>Child item 2</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </article>
+            
+            <article>
+                
+                <h3>Ordered List (Numbered)</h3>
+                <!-- Ordered list shows items in specific order with numbers -->
+                
+                <ol>
+                    <!-- <ol> creates an ordered (numbered) list -->
+                    
+                    <li>First step</li>
+                    <!-- Automatically gets number 1 -->
+                    
+                    <li>Second step</li>
+                    <!-- Automatically gets number 2 -->
+                    
+                    <li>Third step</li>
+                    
+                    <li>
+                        Last step with sub-steps:
+                        <ol>
+                            <!-- Nested ordered list -->
+                            <li>Sub-step A</li>
+                            <li>Sub-step B</li>
+                        </ol>
+                    </li>
+                </ol>
+                
+            </article>
+            
+            <article>
+                
+                <h3>Description List</h3>
+                <!-- Description lists pair terms with their descriptions -->
+                
+                <dl>
+                    <!-- <dl> means "description list" -->
+                    
+                    <dt>HTML</dt>
+                    <!-- <dt> means "description term" - the word being defined -->
+                    
+                    <dd>HyperText Markup Language - used to structure web page content</dd>
+                    <!-- <dd> means "description definition" - the explanation of the term -->
+                    
+                    <dt>CSS</dt>
+                    <dd>Cascading Style Sheets - used to style and layout web pages</dd>
+                    
+                    <dt>JavaScript</dt>
+                    <dd>A programming language that adds interactivity to websites</dd>
+                </dl>
+                
+            </article>
+            
+        </section>
+        
+        <!-- ==================== TABLES SECTION ==================== -->
+        <section id="tables">
+            
+            <h2>Table Tags</h2>
+            
+            <article>
+                
+                <table>
+                    <!-- <table> creates a structured grid of rows and columns for displaying data -->
+                    
+                    <thead>
+                        <!-- <thead> contains the table header (first row with column names) -->
+                        
+                        <tr>
+                            <!-- <tr> means "table row" - creates a horizontal row -->
+                            
+                            <th>Student Name</th>
+                            <!-- <th> means "table header cell" - shows in bold and is for headers -->
+                            
+                            <th>Math Score</th>
+                            <th>English Score</th>
+                            <th>Total Score</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <!-- <tbody> contains the main data rows -->
+                        
+                        <tr>
+                            <td>Raj Kumar</td>
+                            <!-- <td> means "table data cell" - regular cell with data -->
+                            
+                            <td>95</td>
+                            <td>88</td>
+                            <td>183</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Priya Singh</td>
+                            <td>92</td>
+                            <td>94</td>
+                            <td>186</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Arjun Patel</td>
+                            <td>88</td>
+                            <td>85</td>
+                            <td>173</td>
+                        </tr>
+                    </tbody>
+                    
+                    <tfoot>
+                        <!-- <tfoot> contains summary row(s) at the bottom of table -->
+                        
+                        <tr>
+                            <th>Average</th>
+                            <th>91.67</th>
+                            <th>89</th>
+                            <th>180.67</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+            </article>
+            
+        </section>
+        
+        <!-- ==================== FORMS SECTION ==================== -->
+        <section id="forms">
+            
+            <h2>Form Tags</h2>
+            <!-- Forms collect information from users -->
+            
+            <article>
+                
+                <form action="#" method="POST">
+                    <!-- <form> creates an interactive form to collect user input -->
+                    <!-- action="#" is where data goes (server address) -->
+                    <!-- method="POST" sends data securely (hidden in URL) -->
+                    
+                    <div class="form-group">
+                        <!-- <div> is a generic container for grouping elements -->
+                        
+                        <label for="name">Full Name:</label>
+                        <!-- <label> shows text associated with an input. for="name" connects it to the input with id="name" -->
+                        
+                        <input type="text" id="name" name="name" placeholder="Enter your full name">
+                        <!-- <input type="text"> creates a text box for single-line text input -->
+                        <!-- id="name" creates a unique identifier -->
+                        <!-- name="name" is used when sending form data -->
+                        <!-- placeholder shows hint text inside the box -->
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        <!-- type="email" validates that user enters valid email format -->
+                        <!-- required makes this field mandatory (user must fill it) -->
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter password">
+                        <!-- type="password" hides the text as user types (for security) -->
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="120">
+                        <!-- type="number" only accepts numbers -->
+                        <!-- min and max set the range of acceptable numbers -->
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Birth Date:</label>
+                        <input type="date" id="date" name="date">
+                        <!-- type="date" shows a date picker calendar -->
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Preferred Time:</label>
+                        <input type="time" id="time" name="time">
+                        <!-- type="time" shows a time picker -->
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="color">Favorite Color:</label>
+                        <input type="color" id="color" name="color">
+                        <!-- type="color" shows a color picker -->
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country:</label>
+                        <select id="country" name="country">
+                            <!-- <select> creates a dropdown menu to choose from options -->
+                            
+                            <option value="">Select a country</option>
+                            <!-- <option> represents one choice in the dropdown -->
+                            
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="canada">Canada</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message here...">
+                        </textarea>
+                        <!-- <textarea> creates a multi-line text box for longer text -->
+                        <!-- rows="4" makes it 4 lines tall, cols="50" makes it 50 characters wide -->
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            <!-- type="radio" lets user pick ONE option from multiple choices -->
+                            <!-- All radios with same name="gender" are connected -->
+                            Male
+                        </label>
+                        
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            Female
+                        </label>
+                        
+                        <label>
+                            <input type="radio" name="gender" value="other">
+                            Other
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Languages Known:</label>
+                        
+                        <label>
+                            <input type="checkbox" name="languages" value="english">
+                            <!-- type="checkbox" lets user pick MULTIPLE options (can check many) -->
+                            English
+                        </label>
+                        
+                        <label>
+                            <input type="checkbox" name="languages" value="hindi">
+                            Hindi
+                        </label>
+                        
+                        <label>
+                            <input type="checkbox" name="languages" value="spanish">
+                            Spanish
+                        </label>
+                        
+                        <label>
+                            <input type="checkbox" name="languages" value="french">
+                            French
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="agree" name="agree" required>
+                            I agree to the terms and conditions
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit">Submit Form</button>
+                        <!-- <button type="submit"> sends the form data when clicked -->
+                        
+                        <button type="reset">Clear Form</button>
+                        <!-- <button type="reset"> clears all form fields -->
+                        
+                        <button type="button">Cancel</button>
+                        <!-- <button type="button"> does nothing by default (needs JavaScript) -->
+                    </div>
+                </form>
+                
+            </article>
+            
+        </section>
+        
+        <!-- ==================== MEDIA SECTION ==================== -->
+        <section id="media">
+            
+            <h2>Media Tags</h2>
+            <!-- Media tags display images, videos, and audio -->
+            
+            <article>
+                
+                <h3>Images</h3>
+                <img src="https://via.placeholder.com/300x200" alt="Sample image 1">
+                <img src="https://via.placeholder.com/300x200" alt="Sample image 2">
+                
+                <figure>
+                    <!-- <figure> wraps content (like images) that can have a caption -->
+                    
+                    <img src="https://via.placeholder.com/400x250" alt="Sunset landscape">
+                    
+                    <figcaption>
+                        <!-- <figcaption> provides caption/description for the figure -->
+                        This is a beautiful sunset landscape
+                    </figcaption>
+                </figure>
+                
+            </article>
+            
+            <article>
+                
+                <h3>Videos</h3>
+                <video width="320" height="240" controls>
+                    <!-- <video> embeds video on the page -->
+                    <!-- width and height set video player size -->
+                    <!-- controls shows play, pause, volume buttons -->
+                    
+                    <source src="https://via.placeholder.com/video.mp4" type="video/mp4">
+                    <!-- <source> specifies the video file to play. type="video/mp4" tells the format -->
+                    
+                    Your browser does not support the video tag.
+                    <!-- Fallback text if browser doesn't support video -->
+                </video>
+                
+            </article>
+            
+            <article>
+                
+                <h3>Audio</h3>
+                <audio controls>
+                    <!-- <audio> embeds audio on the page -->
+                    <!-- controls shows play, pause, volume buttons -->
+                    
+                    <source src="https://via.placeholder.com/audio.mp3" type="audio/mpeg">
+                    <!-- <source> specifies the audio file. type="audio/mpeg" means MP3 format -->
+                    
+                    Your browser does not support the audio tag.
+                </audio>
+                
+            </article>
+            
+        </section>
+        
+        <!-- ==================== SEMANTIC TAGS SECTION ==================== -->
+        <section id="semantic">
+            
+            <h2>Semantic HTML Tags</h2>
+            <!-- Semantic tags have meaning - they tell both browser and reader what type of content they contain -->
+            
+            <article>
+                <!-- <article> is used for independent content like blog posts, news articles -->
+                
+                <header>
+                    <!-- <header> typically contains introductory content, logos, titles -->
+                    <h3>Article Title: Understanding Semantic HTML</h3>
+                    <time datetime="2024-01-15">Published on January 15, 2024</time>
+                    <!-- <time> marks date/time. datetime shows machine-readable format -->
+                </header>
+                
+                <p>
+                    Semantic HTML means using tags that clearly describe their content.
+                    This helps search engines, screen readers, and other developers understand your code better.
+                </p>
+                
+                <footer>
+                    <!-- <footer> typically contains author info, copyright, links -->
+                    <p>Written by <cite>John Developer</cite></p>
+                    <!-- <cite> marks the title of a work or name of author -->
+                </footer>
+            </article>
+            
+            <aside>
+                <!-- <aside> contains content that is separate from main content, like sidebar -->
+                <h3>Did You Know?</h3>
+                <p>
+                    Using semantic HTML improves:
+                </p>
+                <ul>
+                    <li>Search engine rankings (SEO)</li>
+                    <li>Accessibility for users with screen readers</li>
+                    <li>Code readability for other developers</li>
+                </ul>
+            </aside>
+            
+        </section>
+        
+        <!-- ==================== SPECIAL CONTENT SECTION ==================== -->
+        <section>
+            
+            <h2>Special Content Tags</h2>
+            
+            <article>
+                
+                <h3>Blockquote</h3>
+                <blockquote cite="https://www.example.com">
+                    <!-- <blockquote> shows a longer quote from another source -->
+                    <!-- cite attribute shows where quote came from -->
+                    "The only way to do great work is to love what you do." - Steve Jobs
+                </blockquote>
+                
+            </article>
+            
+            <article>
+                
+                <h3>Horizontal Line</h3>
+                <p>Content before the line</p>
+                <hr>
+                <!-- <hr> creates a horizontal dividing line (used to separate content) -->
+                <p>Content after the line</p>
+                
+            </article>
+            
+            <article>
+                
+                <h3>Line Break</h3>
+                <p>
+                    This is the first line<br>
+                    <!-- <br> creates a line break (moves content to next line) -->
+                    This is the second line<br>
+                    This is the third line
+                </p>
+                
+            </article>
+            
+            <article>
+                
+                <h3>Preformatted Text</h3>
+                <pre>
+                    <!-- <pre> preserves exact spacing and line breaks (used for code) -->
+                    This text    has    extra
+                    spacing and line
+                    breaks that will be kept
+                </pre>
+                
+            </article>
+            
+            <article>
+                
+                <h3>Abbreviation</h3>
+                <p>
+                    <abbr title="HyperText Markup Language">HTML</abbr> is used to create web pages.
+                    <!-- <abbr> marks abbreviations. title shows full form when you hover -->
+                </p>
+                
+            </article>
+            
+        </section>
+        
+    </main>
+    
+    <!-- ==================== FOOTER SECTION ==================== -->
+    <footer id="footer">
+        <!-- <footer> is a semantic tag for the bottom section (copyright, links, etc) -->
+        
+        <p>&copy; 2024 Complete HTML & CSS Guide. All rights reserved.</p>
+        <!-- &copy; is an HTML entity that shows the copyright symbol © -->
+        
+        <ul>
+            <li><a href="#home">Back to Top</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        
+        <p>
+            <small>Created for educational purposes to learn HTML and CSS</small>
+        </p>
+    </footer>
+    
+</body>
+<!-- </body> closes the body tag -->
+
+</html>
+<!-- </html> closes the HTML document -->

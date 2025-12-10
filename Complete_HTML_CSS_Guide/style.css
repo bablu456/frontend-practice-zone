@@ -1,0 +1,1028 @@
+/* ========================================
+   COMPLETE CSS GUIDE WITH EXPLANATIONS
+   ======================================== */
+
+/* ==================== RESET STYLES ==================== */
+/* These styles remove default browser styling to start fresh */
+
+* {
+    /* The * selector means "all elements" - this resets everything */
+    
+    margin: 0;
+    /* margin is empty space OUTSIDE the element (around the element) */
+    /* Setting to 0 removes default spacing */
+    
+    padding: 0;
+    /* padding is empty space INSIDE the element (between content and border) */
+    /* Setting to 0 removes default spacing */
+    
+    box-sizing: border-box;
+    /* box-sizing: border-box means width includes padding and border (easier to calculate sizes) */
+}
+
+/* ==================== BASIC BODY STYLES ==================== */
+
+body {
+    /* body tag styles apply to the entire page */
+    
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    /* font-family sets the typeface (font) used for text */
+    /* Arial and Helvetica are safe fonts most computers have */
+    /* sans-serif is the backup if others aren't available (sans-serif means no decorative lines) */
+    
+    font-size: 16px;
+    /* font-size sets how large text appears */
+    /* 16px means 16 pixels tall (default for most browsers) */
+    
+    line-height: 1.6;
+    /* line-height controls space between lines of text */
+    /* 1.6 means 1.6x the text size (makes text easier to read) */
+    
+    color: #333;
+    /* color sets the text color */
+    /* #333 is a dark gray color (using hex color code) */
+    
+    background-color: #f4f4f4;
+    /* background-color fills the background with a color */
+    /* #f4f4f4 is a light gray color */
+    
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* background-image adds a gradient (smooth color transition) */
+    /* 135deg means angle of gradient, starts at #f5f7fa color, ends at #c3cfe2 */
+}
+
+/* ==================== HEADINGS STYLES ==================== */
+
+h1, h2, h3, h4, h5, h6 {
+    /* This targets ALL heading tags at once */
+    
+    font-weight: bold;
+    /* font-weight: bold makes text thicker/darker (values: normal, bold, or 100-900) */
+    
+    margin-bottom: 0.5em;
+    /* margin-bottom adds space below heading (0.5em = half the font size) */
+    
+    color: #2c3e50;
+    /* color sets heading text to dark blue-gray color */
+    
+    line-height: 1.2;
+    /* Tighter line-height for headings (no extra space between lines) */
+}
+
+h1 {
+    /* Styles specifically for <h1> tags */
+    
+    font-size: 2.5em;
+    /* font-size: 2.5em means 2.5 times the body font size (2.5 * 16px = 40px) */
+    
+    margin-bottom: 0.5em;
+    /* Space below h1 */
+    
+    border-bottom: 3px solid #3498db;
+    /* border-bottom adds a colored line below the heading */
+    /* 3px means 3 pixels thick, solid means solid line, #3498db is bright blue */
+    
+    padding-bottom: 0.5em;
+    /* Space between text and the bottom border */
+}
+
+h2 {
+    font-size: 2em;
+    /* 2em = 2 * 16px = 32px tall */
+    
+    margin-top: 1.5em;
+    /* Space above h2 (creates breathing room) */
+    
+    color: #34495e;
+    /* Slightly different color than h1 */
+}
+
+h3 {
+    font-size: 1.5em;
+    /* 1.5em = 1.5 * 16px = 24px tall */
+    
+    color: #7f8c8d;
+    /* Even lighter gray color for smaller headings */
+}
+
+/* ==================== PARAGRAPH STYLES ==================== */
+
+p {
+    /* Styles for all paragraphs */
+    
+    margin-bottom: 1em;
+    /* Space below each paragraph (1em = 16px) */
+    
+    text-align: justify;
+    /* text-align: justify makes text align to both left and right edges evenly */
+    
+    text-indent: 1.5em;
+    /* text-indent adds space at the beginning of first line (paragraph indent) */
+}
+
+/* ==================== LINK STYLES ==================== */
+
+a {
+    /* Styles for all hyperlinks */
+    
+    color: #3498db;
+    /* Link text is blue */
+    
+    text-decoration: none;
+    /* text-decoration: none removes the underline from links */
+    
+    transition: all 0.3s ease;
+    /* transition makes style changes smooth over 0.3 seconds (animates changes) */
+    /* ease means change happens smoothly (not suddenly) */
+}
+
+a:hover {
+    /* :hover is a pseudo-class - triggers when mouse hovers over the link */
+    
+    color: #2980b9;
+    /* Link becomes darker blue when hovered */
+    
+    text-decoration: underline;
+    /* Underline appears on hover */
+    
+    transform: translateX(5px);
+    /* transform: translateX(5px) moves the link 5px to the right on hover */
+}
+
+a:visited {
+    /* :visited is a pseudo-class for links user already clicked */
+    
+    color: #8e44ad;
+    /* Visited links turn purple */
+}
+
+a:active {
+    /* :active triggers when link is being clicked */
+    
+    color: #c0392b;
+    /* Link turns red while being clicked */
+}
+
+/* ==================== LIST STYLES ==================== */
+
+ul {
+    /* Unordered list styles */
+    
+    margin-left: 2em;
+    /* Indents the list from the left */
+    
+    margin-bottom: 1em;
+    /* Space below list */
+    
+    list-style-type: disc;
+    /* list-style-type: disc shows filled circles as bullets */
+    /* Other options: circle, square, none */
+}
+
+ol {
+    /* Ordered list styles */
+    
+    margin-left: 2em;
+    /* Indents numbered list */
+    
+    list-style-type: decimal;
+    /* decimal shows numbers 1, 2, 3... (other options: roman, alpha) */
+}
+
+li {
+    /* List item styles */
+    
+    margin-bottom: 0.5em;
+    /* Space between list items */
+    
+    padding-left: 0.5em;
+    /* Space between bullet and text */
+}
+
+dl {
+    /* Description list styles */
+    
+    margin-bottom: 1em;
+}
+
+dt {
+    /* Description term (the word being defined) */
+    
+    font-weight: bold;
+    /* Make terms bold */
+    
+    margin-top: 0.5em;
+    /* Space above each term */
+}
+
+dd {
+    /* Description definition (the explanation) */
+    
+    margin-left: 2em;
+    /* Indent definitions from the term */
+    
+    margin-bottom: 0.5em;
+    /* Space below definitions */
+    
+    color: #555;
+    /* Slightly lighter gray for definitions */
+}
+
+/* ==================== TABLE STYLES ==================== */
+
+table {
+    /* Table container styles */
+    
+    width: 100%;
+    /* width: 100% makes table stretch full width of container */
+    
+    border-collapse: collapse;
+    /* border-collapse: collapse removes space between cell borders (cleaner look) */
+    
+    margin-bottom: 2em;
+    /* Space below table */
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow adds a subtle shadow (makes table appear to float) */
+    /* 0 2px = position of shadow, 4px = blur, rgba = shadow color with opacity */
+    
+    border-radius: 8px;
+    /* border-radius rounds the corners of table */
+    /* 8px means 8 pixel radius curve */
+    
+    overflow: hidden;
+    /* overflow: hidden hides content that goes beyond borders (needed with border-radius) */
+}
+
+th, td {
+    /* Styles for table header and data cells */
+    
+    border: 1px solid #ddd;
+    /* border adds a line around each cell */
+    /* 1px = 1 pixel thick, solid = solid line, #ddd = light gray */
+    
+    padding: 12px;
+    /* padding adds space inside cells (between content and border) */
+    
+    text-align: left;
+    /* text-align: left aligns content to left side of cell */
+}
+
+th {
+    /* Table header cell specific styles */
+    
+    background-color: #3498db;
+    /* Bright blue background for headers */
+    
+    color: white;
+    /* White text on blue background */
+    
+    font-weight: bold;
+    /* Make header text bold */
+    
+    text-align: center;
+    /* Center align header text */
+}
+
+tbody tr:nth-child(odd) {
+    /* nth-child(odd) targets every other row (1st, 3rd, 5th...) */
+    
+    background-color: #ecf0f1;
+    /* Light gray background for alternate rows (easier to read) */
+}
+
+tbody tr:hover {
+    /* When mouse hovers over a table row */
+    
+    background-color: #d5dbdb;
+    /* Background becomes darker on hover */
+    
+    transition: 0.2s;
+    /* Smooth transition for color change */
+}
+
+tfoot tr {
+    /* Footer row of table */
+    
+    background-color: #34495e;
+    /* Dark background */
+    
+    color: white;
+    /* White text */
+    
+    font-weight: bold;
+    /* Bold text */
+}
+
+/* ==================== FORM STYLES ==================== */
+
+form {
+    /* Form container styles */
+    
+    background-color: white;
+    /* White background for form */
+    
+    padding: 2em;
+    /* 2em padding inside form (2 * 16px = 32px) */
+    
+    border-radius: 8px;
+    /* Rounded corners */
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    
+    max-width: 600px;
+    /* max-width limits form width to 600px (prevents it from being too wide) */
+    
+    margin: 2em auto;
+    /* Margin: auto on left-right centers the form horizontally */
+}
+
+.form-group {
+    /* Container for each form field */
+    
+    margin-bottom: 1.5em;
+    /* Space between form fields */
+    
+    display: flex;
+    /* display: flex uses flexbox layout (modern alignment system) */
+    
+    flex-direction: column;
+    /* flex-direction: column stacks items vertically (label above input) */
+}
+
+label {
+    /* Label text styles */
+    
+    font-weight: bold;
+    /* Bold labels */
+    
+    margin-bottom: 0.5em;
+    /* Space between label and input */
+    
+    color: #2c3e50;
+    /* Dark color for labels */
+    
+    display: block;
+    /* display: block makes label take full width */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="color"],
+select,
+textarea {
+    /* Styles for all text input fields */
+    
+    width: 100%;
+    /* width: 100% makes inputs full width of container */
+    
+    padding: 10px;
+    /* Padding inside input boxes */
+    
+    border: 2px solid #bdc3c7;
+    /* Gray border around inputs */
+    
+    border-radius: 4px;
+    /* Slightly rounded corners */
+    
+    font-size: 1em;
+    /* Same font size as body */
+    
+    font-family: 'Arial', sans-serif;
+    /* Use Arial font */
+    
+    transition: border-color 0.3s;
+    /* Smooth color change when focused */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="color"]:focus,
+select:focus,
+textarea:focus {
+    /* :focus targets input when user clicks in it */
+    
+    border-color: #3498db;
+    /* Border becomes blue when focused */
+    
+    outline: none;
+    /* outline: none removes default browser outline (we use border instead) */
+    
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    /* Subtle blue glow when focused */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    /* Radio and checkbox styles */
+    
+    margin-right: 0.5em;
+    /* Space between checkbox/radio and label */
+    
+    cursor: pointer;
+    /* cursor: pointer shows hand icon (indicates clickable) */
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+    /* Button styles */
+    
+    background-color: #3498db;
+    /* Blue background */
+    
+    color: white;
+    /* White text */
+    
+    padding: 10px 20px;
+    /* padding: 10px 20px means 10px top/bottom, 20px left/right */
+    
+    border: none;
+    /* border: none removes default button border */
+    
+    border-radius: 4px;
+    /* Rounded corners */
+    
+    font-size: 1em;
+    /* Normal font size */
+    
+    font-weight: bold;
+    /* Bold text */
+    
+    cursor: pointer;
+    /* Show hand cursor on hover */
+    
+    transition: all 0.3s;
+    /* Smooth transitions for all properties */
+    
+    margin-right: 0.5em;
+    /* Space between buttons */
+}
+
+button:hover {
+    /* When mouse hovers over button */
+    
+    background-color: #2980b9;
+    /* Darker blue */
+    
+    transform: scale(1.05);
+    /* transform: scale(1.05) makes button slightly bigger (5% larger) */
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Bigger shadow on hover */
+}
+
+button:active {
+    /* When button is being clicked */
+    
+    transform: scale(0.98);
+    /* Makes button slightly smaller (pressed effect) */
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Shadow becomes smaller */
+}
+
+/* ==================== IMAGE STYLES ==================== */
+
+img {
+    /* Image styles */
+    
+    max-width: 100%;
+    /* max-width: 100% makes images never wider than container */
+    
+    height: auto;
+    /* height: auto keeps aspect ratio (image stays proportional) */
+    
+    display: block;
+    /* display: block removes small gap below image */
+    
+    margin: 1em auto;
+    /* Center image horizontally */
+    
+    border-radius: 8px;
+    /* Rounded corners on images */
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    
+    transition: transform 0.3s;
+    /* Smooth animation for transform */
+}
+
+img:hover {
+    /* When mouse hovers over image */
+    
+    transform: scale(1.05);
+    /* Image grows slightly on hover */
+}
+
+/* ==================== VIDEO AND AUDIO STYLES ==================== */
+
+video, audio {
+    /* Video and audio player styles */
+    
+    width: 100%;
+    /* Full width */
+    
+    max-width: 600px;
+    /* Maximum 600px wide */
+    
+    display: block;
+    /* Block display */
+    
+    margin: 1em auto;
+    /* Center it */
+    
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+/* ==================== FIGURE AND FIGCAPTION STYLES ==================== */
+
+figure {
+    /* Figure container styles */
+    
+    margin: 1em auto;
+    /* Space around figure */
+    
+    text-align: center;
+    /* Center content */
+}
+
+figcaption {
+    /* Caption text under figure */
+    
+    font-style: italic;
+    /* font-style: italic makes text slanted (less important text) */
+    
+    color: #7f8c8d;
+    /* Gray color */
+    
+    margin-top: 0.5em;
+    /* Space above caption */
+}
+
+/* ==================== BLOCKQUOTE STYLES ==================== */
+
+blockquote {
+    /* Large quote styles */
+    
+    border-left: 4px solid #3498db;
+    /* Thick blue line on left side */
+    
+    padding-left: 1em;
+    /* Space between line and text */
+    
+    margin: 2em 0;
+    /* Space above and below */
+    
+    color: #555;
+    /* Gray text */
+    
+    font-style: italic;
+    /* Italic/slanted text */
+    
+    background-color: #ecf0f1;
+    /* Light gray background */
+    
+    padding: 1em;
+    /* Padding on all sides */
+}
+
+/* ==================== HORIZONTAL RULE STYLES ==================== */
+
+hr {
+    /* Horizontal divider line */
+    
+    border: none;
+    /* Remove default border */
+    
+    border-top: 2px solid #3498db;
+    /* Add blue line on top */
+    
+    margin: 2em 0;
+    /* Space above and below */
+}
+
+/* ==================== PREFORMATTED TEXT STYLES ==================== */
+
+pre {
+    /* Preformatted text (for code) */
+    
+    background-color: #2c3e50;
+    /* Dark background */
+    
+    color: #ecf0f1;
+    /* Light text */
+    
+    padding: 1em;
+    /* Space inside */
+    
+    border-radius: 4px;
+    /* Rounded corners */
+    
+    overflow-x: auto;
+    /* overflow-x: auto adds horizontal scroll if code is too long */
+    
+    font-family: 'Courier New', monospace;
+    /* monospace font (all letters same width, looks like code) */
+    
+    font-size: 0.9em;
+    /* Slightly smaller than normal text */
+    
+    line-height: 1.4;
+    /* Smaller line height for code */
+}
+
+code {
+    /* Inline code snippets */
+    
+    background-color: #f4f4f4;
+    /* Light gray background */
+    
+    padding: 0.2em 0.4em;
+    /* Small padding around code */
+    
+    border-radius: 3px;
+    /* Slightly rounded */
+    
+    font-family: 'Courier New', monospace;
+    /* Monospace font */
+    
+    color: #c0392b;
+    /* Red text for code */
+}
+
+/* ==================== ABBR AND SPECIAL TEXT ==================== */
+
+abbr {
+    /* Abbreviation styles */
+    
+    cursor: help;
+    /* cursor: help shows question mark (indicates hoverable) */
+    
+    border-bottom: 1px dotted #3498db;
+    /* Dotted underline */
+    
+    text-decoration: none;
+    /* No underline (dotted border instead) */
+}
+
+mark {
+    /* Highlighted text */
+    
+    background-color: #f39c12;
+    /* Yellow/orange background */
+    
+    padding: 0.2em 0.4em;
+    /* Small padding */
+}
+
+strong {
+    /* Strong emphasis (bold) */
+    
+    font-weight: bold;
+    /* Bold */
+    
+    color: #2c3e50;
+    /* Dark color */
+}
+
+em {
+    /* Emphasis (italic) */
+    
+    font-style: italic;
+    /* Italic/slanted */
+    
+    color: #e74c3c;
+    /* Red color */
+}
+
+/* ==================== HEADER AND NAVIGATION STYLES ==================== */
+
+header {
+    /* Page header styles */
+    
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Gradient background from purple to darker purple */
+    
+    padding: 1.5em;
+    /* Padding inside */
+    
+    color: white;
+    /* White text */
+    
+    margin-bottom: 2em;
+    /* Space below header */
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+nav ul {
+    /* Navigation list (remove default styles) */
+    
+    list-style: none;
+    /* Remove bullet points */
+    
+    margin: 0;
+    /* Remove margin */
+    
+    padding: 0;
+    /* Remove padding */
+    
+    display: flex;
+    /* display: flex arranges items horizontally */
+    
+    flex-wrap: wrap;
+    /* flex-wrap: wrap lets items wrap to next line if needed */
+    
+    gap: 2em;
+    /* gap: 2em creates space between navigation items */
+    
+    justify-content: center;
+    /* justify-content: center centers items horizontally */
+}
+
+nav a {
+    /* Navigation link styles */
+    
+    color: white;
+    /* White text */
+    
+    text-decoration: none;
+    /* No underline */
+    
+    font-weight: bold;
+    /* Bold links */
+    
+    transition: all 0.3s;
+    /* Smooth transitions */
+}
+
+nav a:hover {
+    /* On hover */
+    
+    color: #ffd700;
+    /* Gold color on hover */
+    
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    /* text-shadow adds glowing effect */
+}
+
+/* ==================== MAIN CONTENT STYLES ==================== */
+
+main {
+    /* Main content area */
+    
+    max-width: 1000px;
+    /* Maximum width */
+    
+    margin: 0 auto;
+    /* Center on page */
+    
+    padding: 2em;
+    /* Padding on all sides */
+}
+
+section {
+    /* Section container */
+    
+    margin-bottom: 3em;
+    /* Space between sections */
+    
+    padding: 2em;
+    /* Padding inside */
+    
+    background-color: white;
+    /* White background */
+    
+    border-radius: 8px;
+    /* Rounded corners */
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
+}
+
+article {
+    /* Article container */
+    
+    margin-bottom: 2em;
+    /* Space between articles */
+    
+    padding: 1.5em;
+    /* Padding inside */
+    
+    border-left: 4px solid #3498db;
+    /* Blue left border */
+}
+
+aside {
+    /* Sidebar/aside content */
+    
+    background-color: #ecf0f1;
+    /* Light gray background */
+    
+    padding: 1.5em;
+    /* Padding inside */
+    
+    border-radius: 4px;
+    /* Rounded corners */
+    
+    margin: 2em 0;
+    /* Space above and below */
+    
+    font-size: 0.95em;
+    /* Slightly smaller text */
+}
+
+/* ==================== FOOTER STYLES ==================== */
+
+footer {
+    /* Footer styles */
+    
+    background-color: #2c3e50;
+    /* Dark background */
+    
+    color: white;
+    /* White text */
+    
+    padding: 2em;
+    /* Padding inside */
+    
+    text-align: center;
+    /* Center align text */
+    
+    margin-top: 3em;
+    /* Space above footer */
+    
+    border-top: 3px solid #3498db;
+    /* Blue line at top */
+}
+
+footer a {
+    /* Footer links */
+    
+    color: #3498db;
+    /* Blue color */
+}
+
+footer a:hover {
+    /* On hover */
+    
+    color: #ffd700;
+    /* Gold color */
+}
+
+footer ul {
+    /* Footer list */
+    
+    list-style: none;
+    /* No bullets */
+    
+    margin: 1em 0;
+    /* Space around */
+    
+    display: flex;
+    /* Horizontal layout */
+    
+    justify-content: center;
+    /* Center items */
+    
+    gap: 2em;
+    /* Space between items */
+    
+    flex-wrap: wrap;
+    /* Wrap if needed */
+}
+
+/* ==================== RESPONSIVE DESIGN (MOBILE) ==================== */
+
+@media (max-width: 768px) {
+    /* @media query changes styles on screens 768px or smaller (tablets/phones) */
+    
+    h1 {
+        font-size: 1.8em;
+        /* Smaller heading on mobile */
+    }
+    
+    h2 {
+        font-size: 1.4em;
+        /* Smaller subheading */
+    }
+    
+    nav ul {
+        flex-direction: column;
+        /* Navigation goes vertical on mobile */
+        
+        gap: 1em;
+        /* Less space between items */
+        
+        text-align: center;
+        /* Center text */
+    }
+    
+    main {
+        padding: 1em;
+        /* Less padding on mobile */
+    }
+    
+    section {
+        padding: 1em;
+        /* Less padding */
+        
+        margin-bottom: 2em;
+        /* Less space between sections */
+    }
+    
+    table {
+        font-size: 0.9em;
+        /* Smaller text for table */
+    }
+    
+    th, td {
+        padding: 8px;
+        /* Less padding in table cells */
+    }
+    
+    form {
+        max-width: 100%;
+        /* Full width on mobile */
+        
+        padding: 1em;
+        /* Less padding */
+    }
+}
+
+@media (max-width: 480px) {
+    /* @media query for very small screens (phones) */
+    
+    body {
+        font-size: 14px;
+        /* Smaller base font size */
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        /* Even smaller h1 */
+    }
+    
+    h2 {
+        font-size: 1.2em;
+        /* Even smaller h2 */
+    }
+    
+    button {
+        width: 100%;
+        /* Full width buttons */
+        
+        margin-bottom: 0.5em;
+        /* Space between buttons */
+    }
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+.text-center {
+    /* Utility class to center text */
+    text-align: center;
+}
+
+.text-right {
+    /* Utility class to align text right */
+    text-align: right;
+}
+
+.mt-1 {
+    /* Utility class: margin-top 1em */
+    margin-top: 1em;
+}
+
+.mb-1 {
+    /* Utility class: margin-bottom 1em */
+    margin-bottom: 1em;
+}
+
+.p-1 {
+    /* Utility class: padding 1em on all sides */
+    padding: 1em;
+}
+
+.rounded {
+    /* Utility class: rounded corners */
+    border-radius: 8px;
+}
+
+.shadow {
+    /* Utility class: add shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
