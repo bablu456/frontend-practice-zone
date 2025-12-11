@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+  <div class="bg-gray-800 p-6 rounded-2xl shadow-2xl w-80">
+    <div id="display" class="bg-gray-700 text-white text-right text-3xl p-4 rounded-lg mb-4 h-16 overflow-hidden">0</div>
+    
+    <div class="grid grid-cols-4 gap-3">
+      <button onclick="clearDisplay()" class="bg-red-500 hover:bg-red-600 text-white font-bold py-4 rounded-lg col-span-2">C</button>
+      <button onclick="deleteLast()" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 rounded-lg">DEL</button>
+      <button onclick="appendOperator('/')" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-lg">÷</button>
+      
+      <button onclick="appendNumber('7')" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-4 rounded-lg">7</button>
+      <button onclick="appendNumber('8')" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-4 rounded-lg">8</button>
+      <button onclick="appendNumber('9')" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-4 rounded-lg">9</button>
+      <button onclick="appendOperator('*')" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-lg">×</button>
+      
+      <button onclick="appendNumber('4')" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-4 rounded-lg">4</button>
+      <button onclick="appendNumber('5')" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-4 rounded-lg">5</button>
+      <button onclick="appendNumber('6')" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-4 rounded-lg">6</button>
+      <button onclick="appendOperator('-')" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-lg">−</button>
+      
+      <button onclick="appendNumber('1')" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-4 rounded-lg">1</button>
+      <button onclick="appendNumber('2')" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-4 rounded-lg">2</button>
+      <button onclick="appendNumber('3')" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-4 rounded-lg">3</button>
+      <button onclick="appendOperator('+')" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-lg">+</button>
+      
+      <button onclick="appendNumber('0')" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-4 rounded-lg col-span-2">0</button>
+      <button onclick="appendNumber('.')" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-4 rounded-lg">.</button>
+      <button onclick="calculate()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-lg">=</button>
+    </div>
+  </div>
+
+  <script>
+    let display = document.getElementById('display');
+    let currentValue = '0';
+    let operator = '';
+    let previousValue = '';
+    let shouldResetDisplay = false;
+
+    function updateDisplay() {
+      display.textContent = currentValue;
+    }
+
+    function appendNumber(num) {
+      if (shouldResetDisplay) {
+        currentValue = num;
+        shouldResetDisplay = false;
+      } else {
+        if (currentValue === '0' && num !== '.') {
+          currentValue = num;
+        } else if (num === '.' && currentValue.includes('.')) {
+          return;
+        } else {
+          currentValue += num;
+        }
+      }
+      updateDisplay();
+    }
+
+    function appendOperator(op) {
+      if (operator && !shouldResetDisplay) {
+        calculate();
+      }
+      operator = op;
+      previousValue = currentValue;
+      shouldResetDisplay = true;
+    }
+
+    function calculate() {
+      if (!operator || !previousValue) return;
+      
+      let result;
+      const prev = parseFloat(previousValue);
+      const current = parseFloat(currentValue);
+      
+      switch(operator) {
+        case '+': result = prev + current; break;
+        case '-': result = prev - current; break;
+        case '*': result = prev * current; break;
+        case '/': result = prev / current; break;
+        default: return;
+      }
+      
+      currentValue = result.toString();
+      operator = '';
+      previousValue = '';
+      shouldResetDisplay = true;
+      updateDisplay();
+    }
+
+    function clearDisplay() {
+      currentValue = '0';
+      operator = '';
+      previousValue = '';
+      shouldResetDisplay = false;
+      updateDisplay();
+    }
+
+    function deleteLast() {
+      if (currentValue.length > 1) {
+        currentValue = currentValue.slice(0, -1);
+      } else {
+        currentValue = '0';
+      }
+      updateDisplay();
+    }
+  </script>
+</body>
+</html>
