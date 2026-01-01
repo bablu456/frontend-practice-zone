@@ -1,4 +1,4 @@
-# 🌐 HTML-CSS Core Projects
+# 🌐 HTML-CSS Core Projects.
 
 Welcome to `html-css-core-projects` — a curated collection of beginner-friendly web development projects built using HTML and CSS. This repo reflects my journey from learning basic tags and styling to building responsive layouts and real-world components.
 
@@ -29,3 +29,4 @@ This repository is designed for:
 1. Clone the repo:
    ```bash
    git clone https://github.com/your-username/html-css-core-projects.git
+
