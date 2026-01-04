@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevSeeker - Github Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Find a Dev</h2>
+
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Enter Github username...">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div id="profile-card" class="card" style="display: none;">
+            <img id="avatar" src="" alt="User Image">
+            <h3 id="name">Name Here</h3>
+            <p id="bio">Bio goes here...</p>
+            <div class="stats">
+                <span>📂 Repos: <b id="repos">0</b></span>
+                <span>👥 Followers: <b id="followers">0</b></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
