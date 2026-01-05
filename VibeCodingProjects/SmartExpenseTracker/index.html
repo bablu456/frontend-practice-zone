@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Expense Tracker | Financial Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">💰 ExpenseFlow</div>
+        <nav>
+          <button class="nav-btn active" data-view="dashboard">Dashboard</button>
+          <button class="nav-btn" data-view="expenses">All Expenses</button>
+          <button class="nav-btn" id="theme-toggle">🌙 Dark Mode</button>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+          <h1>Financial Dashboard</h1>
+          <button class="btn btn-primary" id="add-expense-btn">+ Add Expense</button>
+        </header>
+
+        <!-- Dashboard View -->
+        <section id="dashboard-view" class="view active">
+          <div class="stats-grid">
+            <div class="card stat-card">
+              <div class="stat-label">This Month</div>
+              <div class="stat-value" id="monthly-total">$0.00</div>
+            </div>
+            <div class="card stat-card">
+              <div class="stat-label">This Week</div>
+              <div class="stat-value" id="weekly-total">$0.00</div>
+            </div>
+            <div class="card stat-card highlight">
+              <div class="stat-label">Highest Category</div>
+              <div class="stat-value" id="top-category">—</div>
+            </div>
+          </div>
+
+          <div class="charts-grid">
+            <div class="card chart-card">
+              <h3>Category Breakdown</h3>
+              <canvas id="categoryChart"></canvas>
+            </div>
+            <div class="card chart-card">
+              <h3>Daily Expenses Trend</h3>
+              <canvas id="trendChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- Expenses List View -->
+        <section id="expenses-view" class="view">
+          <div class="filters">
+            <input type="text" id="search-input" placeholder="Search expenses..." />
+            <select id="category-filter">
+              <option value="">All Categories</option>
+              <option>Food</option>
+              <option>Transport</option>
+              <option>Shopping</option>
+              <option>Entertainment</option>
+              <option>Health</option>
+              <option>Utilities</option>
+              <option>Others</option>
+            </select>
+            <input type="date" id="date-filter" />
+          </div>
+
+          <div class="table-container">
+            <table id="expenses-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Amount</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="expenses-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="expense-modal">
+      <div class="modal-content">
+        <h2 id="modal-title">Add Expense</h2>
+        <form id="expense-form">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="expense-name" required placeholder="e.g. Coffee" />
+          </div>
+          <div class="form-group">
+            <label>Amount</label>
+            <input type="number" id="expense-amount" step="0.01" min="0" required placeholder="0.00" />
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <select id="expense-category" required>
+              <option value="">Select category</option>
+              <option>Food</option>
+              <option>Transport</option>
+              <option>Shopping</option>
+              <option>Entertainment</option>
+              <option>Health</option>
+              <option>Utilities</option>
+              <option>Others</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="expense-date" required />
+          </div>
+          <input type="hidden" id="expense-id" />
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save Expense</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
